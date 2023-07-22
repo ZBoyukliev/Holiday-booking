@@ -10,3 +10,9 @@
         }
     }
 }
+
+@media (min-width: 280px) and (max-width: 767px){
+    .card-container {
+        margin: 0 auto;
+    }
+}
