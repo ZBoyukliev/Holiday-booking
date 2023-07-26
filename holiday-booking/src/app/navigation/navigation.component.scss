@@ -4,5 +4,10 @@
     background: linear-gradient(to right,rgba($primary, 0.95),rgba($secondary, 0.95));
     li {
         padding: 0 0.7rem;
+        a {
+            color: $white;
+            font-weight: 500;
+            font-size: large;
+        }
     }
  }
