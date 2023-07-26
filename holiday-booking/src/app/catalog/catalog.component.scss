@@ -8,4 +8,8 @@
    background-image: url('/assets/main-home.jpg');
    background-size: cover;
    background-position: center;
+   padding: 40px;
+   .catalog-row {
+    justify-content: space-around;
+   }
 }
