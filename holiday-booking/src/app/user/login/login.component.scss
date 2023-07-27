@@ -1,28 +1,12 @@
-/* login.component.scss */
+
+@use '../../../scss/buttons' as *;
 
 .login {
     height: 70vh;
     width: 100%;
     // padding-top: 60px;
+
 }
 
-// .card {
-//     margin-top: 30px;
-//   }
-  
-//   .card-header {
-//     background-color: #007bff;
-//     color: #fff;
-//     text-align: center;
-//   }
-  
-//   .btn-primary {
-//     background-color: #007bff;
-//     border-color: #007bff;
-//   }
-  
-//   .btn-primary:hover {
-//     background-color: #0056b3;
-//     border-color: #0056b3;
-//   }
+
   
