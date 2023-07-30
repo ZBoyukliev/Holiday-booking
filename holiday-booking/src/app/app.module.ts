@@ -10,6 +10,8 @@ import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { UserModule } from './user/user.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { UserModule } from './user/user.module';
     BrowserModule,
     AppRoutingModule,
     UserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
