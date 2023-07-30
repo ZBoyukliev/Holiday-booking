@@ -6,18 +6,10 @@
 
   <!-- Static Hotels -->
   <div class="row py-5">
-    <div class="card-container mb-4 mb-lg-0 col-10 col-md-6 col-lg-4">
-      <app-card/>
+    <div class="card-container mb-4 mb-lg-0 col-10 col-md-6 col-lg-4" *ngFor="let hotel of hotels.slice(0, 3)">
+      <app-card [hotel]="hotel"/>
     </div>
-    <div class="card-container mb-4 mb-lg-0 col-10 col-md-6 col-lg-4">
-       <app-card/>
-    </div>
-    <div class="card-container mb-4 mb-lg-0 col-10 col-md-6 col-lg-4">
-       <app-card/>
-    </div>
-    <!-- <div class="card-container mb-4 mb-lg-0 col-10 col-md-6 col-lg-4">
-      <app-card/>
-   </div> -->
+
   </div>
   
 </div>

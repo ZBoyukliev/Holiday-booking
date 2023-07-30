@@ -1338,8 +1338,8 @@
             "fd436770-76c5-40e2-b231-77409eda7a61": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a61",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "Black Bag",
-                "category": "bags",
+                "title": "First hotel",
+                "category": "hotel",
                 "imageUrl": "/images/bags/bag-black.png",
                 "_createdOn": 1617194128641,
                 "price": 19.90,
@@ -1347,8 +1347,8 @@
             "fd436770-76c5-40e2-b231-77409eda7a62": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a62",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "GrayX Bag",
-                "category": "bags",
+                "title": "Second hotel",
+                "category": "hotel",
                 "imageUrl": "/images/bags/bag-gray1.png",
                 "_createdOn": 1617194128642,
                 "price": 89.90,
@@ -1356,8 +1356,8 @@
             "fd436770-76c5-40e2-b231-77409eda7a63": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a63",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "Blue-dark Bag",
-                "category": "bags",
+                "title": "Third hotel",
+                "category": "hotel",
                 "imageUrl": "/images/bags/bag-blue1.png",
                 "_createdOn": 1617194128643,
                 "price": 99.90,
@@ -1365,8 +1365,8 @@
             "fd436770-76c5-40e2-b231-77409eda7a64": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a64",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "Ches Bag",
-                "category": "bags",
+                "title": "Fourth hotel",
+                "category": "hotel",
                 "imageUrl": "/images/bags/bag-ch1.png",
                 "_createdOn": 1617194128644,
                 "price": 99.90,

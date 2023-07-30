@@ -22,7 +22,6 @@ export class HomeComponent implements OnInit {
         console.log(data);
         console.log(this.hotels);
         
-        
       },
       (error) => {
         console.error('Error fetching hotel data:', error);
