@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { UserModule } from './user/user.module';
 import { HttpClientModule } from '@angular/common/http';
+import { UserRoutingModule } from './user/user-routing.module';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserModule,
+    UserRoutingModule,
     HttpClientModule,
   ],
   providers: [],
