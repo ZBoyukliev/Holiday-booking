@@ -10,21 +10,12 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   // constructor(private userService: UserService, private router: Router) {}
   email: string = ''; 
+  username: string = '';
   password: string = ''; 
   loginError: boolean = false;
 
   constructor(private userService: UserService) { }
 
-  onSubmit() {
-    this.userService.login(this.email, this.password)
-      .subscribe(
-        (response) => {
-          console.log('Login Successful!', response);
-        },
-        (error) => {
-          this.loginError = true;
-        }
-      );
-  }
+ 
 }
 
