@@ -7,7 +7,7 @@ import { HotelsService } from '../services/hotels.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  hotels: any[] = []; // Assuming your hotel data is an array of objects
+  hotels: any[] = []; 
 
   constructor(private hotelService: HotelsService) { }
 
@@ -16,19 +16,17 @@ export class HomeComponent implements OnInit {
   }
 
   getHotels(): void {
-    this.hotelService.getHotels().subscribe(
-      (data) => {
-        this.hotels = data; // Assign the fetched hotel data to the 'hotels' array
-        console.log(data);
-        console.log(this.hotels);
-        
-      },
-      (error) => {
-        console.error('Error fetching hotel data:', error);
-      }
-    );
-  }
-}
+    this.hotelService.getHotels()
+      .subscribe({
+        next: (data) => {
+          this.hotels = data;
+        },
+        error: (error) => {
+          console.error('Error fetching hotel data:', error);
+        }
+      });
+  };
+};
 
 
 

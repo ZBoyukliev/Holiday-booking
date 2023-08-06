@@ -75,4 +75,5 @@ export class RegisterComponent {
       });
       console.log(this.userService.isLoggedIn);
   };
-}
+};
+
