@@ -28,6 +28,7 @@ import { UserRoutingModule } from './user/user-routing.module';
     BrowserModule,
     AppRoutingModule,
     UserRoutingModule,
+    UserModule,
     HttpClientModule,
   ],
   providers: [],

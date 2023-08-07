@@ -21,6 +21,10 @@
                  #emailInput="ngModel"
                 >
               </div>
+              <div *ngIf="emailInput.touched" class="inputField error">
+                <div *ngIf="emailInput.errors?.['required']">Email is required!</div>
+                <div *ngIf="emailInput.errors?.['email']">Email is not valid!</div>
+              </div>
               <div class="form-group">
                 <label for="username">Username *</label>
                 <input
@@ -31,34 +35,73 @@
                  ngModel
                  username
                  required
-                 #usernamelInput="ngModel"
+                 minlength="4"
+                 maxlength="15"
+                 #usernameInput="ngModel"
                       >
+              </div>
+              <div *ngIf="usernameInput.touched" class="inputField error">
+                <div *ngIf="usernameInput.errors?.['required']">Username is required!</div>
+              </div>
+              <div *ngIf="usernameInput.touched" class="inputField error">
+                <div *ngIf="usernameInput.errors?.['minlength']">
+                  Username must be at least 4 characters long!
+                </div>
+              </div>
+              <div *ngIf="usernameInput.touched" class="inputField error">
+                <div *ngIf="usernameInput.errors?.['maxlength']">
+                  Username must contain macimum 15 characters!
+                </div>
               </div>
               <div class="form-group">
                 <label for="password">Password *</label>
                 <input
-                 type="password"
-                 id="password" 
-                  class="form-control"
-                  name="password"
+                   type="password"
+                   id="password" 
+                   class="form-control"
+                   name="password" 
                    ngModel
                    #passwordInput="ngModel"
                    required
                    minlength="5"
-                   maxlength="20"
+                   maxlength="15"
                    >
               </div>
+              <div *ngIf="passwordInput.touched" class="inputField error">
+                <div *ngIf="passwordInput.errors?.['required']">
+                  Password is required!
+                </div>
+              </div>
+              <div class="error" *ngIf="passwordInput.errors?.['minlength']">
+                Password must be at least
+                {{passwordInput.errors?.['minlength']['requiredLength']}} characters!
+              </div>
+              <div class="error" *ngIf="passwordInput.errors?.['maxlength']">
+                Password shoud not be longer than
+                {{passwordInput.errors?.['maxlength']['requiredLength']}} characters!
+              </div>
+              
               <div class="form-group">
-                <label for="repeatPassword">Repeat Password *</label>
+                <label for="rePass">Repeat Password *</label>
                 <input
                  type="password"
                  id="rePass"
                   class="form-control"
                   name="rePass"
                   ngModel
-                  #rePassdInput="ngModel"
+                  #rePassInput="ngModel"
                   required>
               </div>
+
+              <div *ngIf="registrationError" class="inputField error">
+                The passwords don't match! Please try again.
+              </div>
+
+              <!-- <div *ngIf="passwordInput.touched" class="inputField error">
+                <div *ngIf="!passwordInput.errors?.['matchPasswordsValidator']">
+                  Passwords must match!
+                </div> -->
+      
 
               <!-- <div class="form-group">
                 <label for="telephone">Telephone</label>

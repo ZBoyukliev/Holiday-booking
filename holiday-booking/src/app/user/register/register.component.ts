@@ -28,7 +28,7 @@ export class RegisterComponent {
 
   onRegisterSubmitHandler(): void {
     console.log('clicked');
-    
+
     if (!this.registerForm) return;
 
     const form = this.registerForm;
@@ -39,6 +39,11 @@ export class RegisterComponent {
 
     if (form.value.password !== form.value.rePass) {
       this.userService.showMessage("The passwords don't match!");
+      
+      this.registrationError = true;
+      setTimeout(() => {
+        this.registrationError = false;
+      }, 3000);
       return;
     }
 
@@ -46,19 +51,19 @@ export class RegisterComponent {
       email: string;
       username: string;
       password: string;
-      rePassword: string;
+      rePass: string;
     } = form.value;
 
 
-    this.api   
-      .userRegister(value.email, value.password, value.username)   
+    this.api
+      .userRegister(value.email, value.password, value.username)
       .subscribe({
         next: (response) => {
           if (response.accessToken) {
             this.api.clearToken();
             this.userService.isLoggedIn = true;
-            console.log(this.userService.isLoggedIn );
-            
+            console.log(this.userService.isLoggedIn);
+
             this.api.setToken('accessToken', response.accessToken);
 
             console.log('Registered successfully!');
@@ -73,7 +78,6 @@ export class RegisterComponent {
           this.userService.showMessage(error.error.message);
         },
       });
-      console.log(this.userService.isLoggedIn);
   };
 };
 
