@@ -13,12 +13,16 @@ export class RegisterComponent {
 
   @ViewChild('registerForm') registerForm: NgForm | undefined;
 
+  errorMessage: string = '';
+  showPasswordMatchMessage: boolean = false;
+
   userData = {
     email: '',
     username: '',
     password: '',
   };
   registrationError: boolean = false;
+  allFields: boolean = false;
 
   constructor(
     private api: ApiService,
@@ -34,16 +38,12 @@ export class RegisterComponent {
     const form = this.registerForm;
 
     if (form.invalid) {
-      return;
-    }
-
-    if (form.value.password !== form.value.rePass) {
-      this.userService.showMessage("The passwords don't match!");
-      
-      this.registrationError = true;
-      setTimeout(() => {
-        this.registrationError = false;
-      }, 3000);
+      this.allFields = true;
+      this.errorMessage = "All fields are required."
+      this.userService.showMessage(this.errorMessage);
+      // setTimeout(() => {
+      //   this.allFields = false;
+      // }, 3000);
       return;
     }
 
@@ -54,6 +54,21 @@ export class RegisterComponent {
       rePass: string;
     } = form.value;
 
+    if (value.email === '' && value.username === '' && value.password === '' && value.rePass === '') {
+      this.userService.showMessage("All fields are required.");
+      return;
+    }
+
+    if (value.password !== value.rePass ) {
+      this.errorMessage = "The passwords don't match!"
+      this.userService.showMessage( this.errorMessage);
+      this.registrationError = true;
+      setTimeout(() => {
+        this.registrationError = false;
+      }, 3000);
+
+      return;
+    }
 
     this.api
       .userRegister(value.email, value.password, value.username)
@@ -78,6 +93,11 @@ export class RegisterComponent {
           this.userService.showMessage(error.error.message);
         },
       });
+    this.showPasswordMatchMessage = true;
+    setTimeout(() => {
+      this.showPasswordMatchMessage = false;
+    }, 3000);
+
   };
 };
 

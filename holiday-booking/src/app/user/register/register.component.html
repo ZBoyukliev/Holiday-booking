@@ -7,7 +7,9 @@
           </div>
           <div class="card-body">
             <form #registerForm="ngForm" (ngSubmit)="onRegisterSubmitHandler()">
-           
+              <div *ngIf="errorMessage" class="inputField error">
+                {{ errorMessage }}
+              </div>
               <div class="form-group">
                 <label for="email">Email *</label>
                 <input
@@ -92,25 +94,11 @@
                   #rePassInput="ngModel"
                   required>
               </div>
-
+              
               <div *ngIf="registrationError" class="inputField error">
-                The passwords don't match! Please try again.
+                {{ errorMessage }}
               </div>
 
-              <!-- <div *ngIf="passwordInput.touched" class="inputField error">
-                <div *ngIf="!passwordInput.errors?.['matchPasswordsValidator']">
-                  Passwords must match!
-                </div> -->
-      
-
-              <!-- <div class="form-group">
-                <label for="telephone">Telephone</label>
-                <input type="tel" class="form-control" id="telephone">
-              </div>
-              <div class="form-group">
-                <label for="city">City</label>
-                <input type="text" class="form-control" id="city">
-              </div> -->
               <button type="submit" class="btn btn-block">Register</button>
             </form>
           </div>

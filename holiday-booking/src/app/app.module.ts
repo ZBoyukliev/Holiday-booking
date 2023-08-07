@@ -12,6 +12,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { UserModule } from './user/user.module';
 import { HttpClientModule } from '@angular/common/http';
 import { UserRoutingModule } from './user/user-routing.module';
+import { UserService } from './user/user.service';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { UserRoutingModule } from './user/user-routing.module';
     HomeComponent,
     CardComponent,
     FooterComponent,
-    CatalogComponent
+    CatalogComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,7 @@ import { UserRoutingModule } from './user/user-routing.module';
     UserModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [ UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
