@@ -94,12 +94,16 @@
                   #rePassInput="ngModel"
                   required>
               </div>
-              
               <div *ngIf="registrationError" class="inputField error">
                 {{ errorMessage }}
               </div>
-
-              <button type="submit" class="btn btn-block">Register</button>
+              <div class="d-flex">
+                <button type="submit" class="btn btn-block">Register</button>
+                <p class="text-center m-auto">
+                  Already have an account?
+                  <a routerLink="/login">Log In</a>
+                </p>
+              </div>
             </form>
           </div>
         </div>
