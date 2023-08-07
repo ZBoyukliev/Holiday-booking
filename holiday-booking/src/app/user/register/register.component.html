@@ -46,7 +46,7 @@
                 <div *ngIf="usernameInput.errors?.['required']">Username is required!</div>
               </div>
               <div *ngIf="usernameInput.touched" class="inputField error">
-                <div *ngIf="usernameInput.errors?.['minlength']">
+                <div  *ngIf="usernameInput.errors?.['minlength']">
                   Username must be at least 4 characters long!
                 </div>
               </div>
@@ -74,9 +74,9 @@
                   Password is required!
                 </div>
               </div>
-              <div class="error" *ngIf="passwordInput.errors?.['minlength']">
+              <div class="inputField error" *ngIf="passwordInput.errors?.['minlength']">
                 Password must be at least
-                {{passwordInput.errors?.['minlength']['requiredLength']}} characters!
+                {{passwordInput.errors?.['minlength']['requiredLength']}} characters and no longer than 15 characters!
               </div>
               <div class="error" *ngIf="passwordInput.errors?.['maxlength']">
                 Password shoud not be longer than

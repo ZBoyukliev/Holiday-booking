@@ -41,9 +41,9 @@ export class RegisterComponent {
       this.allFields = true;
       this.errorMessage = "All fields are required."
       this.userService.showMessage(this.errorMessage);
-      // setTimeout(() => {
-      //   this.allFields = false;
-      // }, 3000);
+      setTimeout(() => {
+        this.allFields = false;
+      }, 3000);
       return;
     }
 
