@@ -24,7 +24,7 @@
           <a class="nav-link" routerLink="/">Create-Hotel</a>
         </li>
         <li *ngIf="this.userService.isLoggedIn" class="nav-item">
-          <a class="nav-link" routerLink="/">Logout</a>
+          <a (click)="logout()" class="nav-link" routerLink="/">Logout</a>
         </li>
         <!-- <li class="nav-item">
                   <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

@@ -27,13 +27,10 @@ export class ApiService {
 
     setToken(key: string, value: string): void {
         localStorage.setItem(key, value);
-      }
+    }
 
-      clearToken(): void {
+    clearToken(): void {
         localStorage.removeItem('accessToken');
-        // localStorage.removeItem('userEmail');
-        // localStorage.removeItem('userId');
-        // localStorage.removeItem('username');  
-      }
+    }
 
 }
