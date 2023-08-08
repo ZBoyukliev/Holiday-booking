@@ -1,6 +1,10 @@
-
+@use '../../../scss/buttons' as *;
 
 .create-hotel {
     min-height: 65vh;
-    // width: 60%;
+    width: 60%;
+    .inputField.error {
+        color: red;
+        text-align: center;
+    }
 }
