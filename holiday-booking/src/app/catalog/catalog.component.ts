@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HotelsService } from '../services/hotels.service';
+import { HotelService } from '../hotels/hotel.service';
 
 @Component({
   selector: 'app-catalog',
@@ -9,7 +9,7 @@ import { HotelsService } from '../services/hotels.service';
 export class CatalogComponent {
   hotels: any[] = []; // Assuming your hotel data is an array of objects
 
-  constructor(private hotelService: HotelsService) { }
+  constructor(private hotelService: HotelService) { }
 
   ngOnInit(): void {
     this.getHotels();

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HotelsService } from '../services/hotels.service';
+import { HotelService } from '../hotels/hotel.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { HotelsService } from '../services/hotels.service';
 export class HomeComponent implements OnInit {
   hotels: any[] = []; 
 
-  constructor(private hotelService: HotelsService) { }
+  constructor(private hotelService: HotelService) { }
 
   ngOnInit(): void {
     this.getHotels();
@@ -29,9 +29,3 @@ export class HomeComponent implements OnInit {
 };
 
 
-
-
-
-// export class HomeComponent {
-
-// }
