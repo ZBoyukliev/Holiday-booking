@@ -35,7 +35,7 @@ export class CreateHotelComponent implements OnInit {
       this.router.navigate(['/']);
     }
 
-    let submitData: { title: string; summary: string; content: string } =
+    let submitData: { hotelName: string; imageUrl: string; description: string , price: number} =
       form.value;
 
     this.hotelService.createHotel(submitData).subscribe({

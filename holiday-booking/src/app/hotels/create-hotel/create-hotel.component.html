@@ -18,10 +18,10 @@
                   id="hotelName"
                   class="form-control"
                   name="hotelName"
+                  ngModel
+                  required
+                  #hotelNameInput="ngModel"
                 >
-                <!-- ngModel
-                required
-                #hotelNameInput="ngModel" -->
               </div>
               <!-- <div *ngIf="hotelNameInput.touched" class="inputField error">
                 <div *ngIf="hotelNameInput.errors?.['required']">Name of the Hotel is required!</div>
@@ -30,17 +30,16 @@
               <!-- Add input fields for other hotel information (image, price, description) here -->
   
               <div class="form-group">
-                <label for="hotelImage">Image *</label>
+                <label for="imageUrl">Image *</label>
                 <input
                   type="text"
-                  id="hotelImage"
+                  id="imageUrl"
                   class="form-control"
-                  name="hotelImage"
-             
+                  name="imageUrl"
+                  ngModel
+                  required
+                  #imageUrlInput="ngModel"
                 >
-                <!-- ngModel
-                required
-                #hotelImageInput="ngModel" -->
               </div>
               <!-- <div *ngIf="hotelImageInput.touched" class="inputField error">
                 <div *ngIf="hotelImageInput.errors?.['required']">Image is required!</div>
@@ -48,21 +47,27 @@
   
               <!-- Add more input fields for price, description, etc. here -->
               <div class="form-group">
-                <label for="hotelDescription">Description *</label>
+                <label for="description">Description *</label>
                 <input
                   type="text"
-                  id="hotelDescription"
+                  id="description"
                   class="form-control"
-                  name="hotelDescription"
+                  name="description"
+                  ngModel
+                  required
+                  #descriptionInput="ngModel"
                 >
               </div>
               <div class="form-group">
-                <label for="hotelPrice">Price *</label>
+                <label for="price">Price *</label>
                 <input
                   type="text"
-                  id="hotelPrice"
+                  id="price"
                   class="form-control"
-                  name="hotelPrice"   
+                  name="price"   
+                  ngModel
+                  required
+                  #priceInput="ngModel"
                 >
               </div>
               <div class="d-flex">
