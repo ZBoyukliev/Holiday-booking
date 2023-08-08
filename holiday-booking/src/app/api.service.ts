@@ -32,5 +32,4 @@ export class ApiService {
     clearToken(): void {
         localStorage.removeItem('accessToken');
     }
-
 }

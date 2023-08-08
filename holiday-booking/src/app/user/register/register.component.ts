@@ -25,7 +25,7 @@ export class RegisterComponent {
   allFields: boolean = false;
 
   constructor(
-    private api: ApiService,
+    private apiService: ApiService,
     private userService: UserService,
     private router: Router
   ) { }
@@ -70,16 +70,19 @@ export class RegisterComponent {
       return;
     }
 
-    this.api
+    this.apiService
       .userRegister(value.email, value.password, value.username)
       .subscribe({
         next: (response) => {
           if (response.accessToken) {
-            this.api.clearToken();
+            this.apiService.clearToken();
             this.userService.isLoggedIn = true;
             console.log(this.userService.isLoggedIn);
 
-            this.api.setToken('accessToken', response.accessToken);
+            this.apiService.setToken('accessToken', response.accessToken);
+            this.apiService.setToken('email', response.email);
+            this.apiService.setToken('userId', response._id);
+            this.apiService.setToken('username', response.username);
 
             console.log('Registered successfully!');
             this.router.navigate(['/']);

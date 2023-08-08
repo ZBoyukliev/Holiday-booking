@@ -41,6 +41,9 @@ export class LoginComponent {
           // this.apiService.clearToken();
           this.userService.isLoggedIn = true;
           this.apiService.setToken('accessToken', response.accessToken);
+          this.apiService.setToken('email', response.email);
+          this.apiService.setToken('userId', response._id);
+          this.apiService.setToken('username', response.username);
 
           console.log('Login successful!');
           this.router.navigate(['/']);

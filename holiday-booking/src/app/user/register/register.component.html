@@ -92,6 +92,8 @@
                   name="rePass"
                   ngModel
                   #rePassInput="ngModel"
+                  minlength="5"
+                  maxlength="15"
                   required>
               </div>
               <div *ngIf="registrationError" class="inputField error">

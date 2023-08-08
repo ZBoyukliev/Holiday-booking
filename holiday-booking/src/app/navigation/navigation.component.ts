@@ -9,13 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-
+  
   constructor(
     public userService: UserService,
     private router: Router,
     private apiService: ApiService
   ) {}
-
   logout(): void {
     this.userService.isLoggedIn = false;
     this.userService.username = null;
@@ -32,6 +31,7 @@ export class NavigationComponent {
   ngOnInit(): void {
     if (localStorage.getItem('accessToken')) {
       this.userService.isLoggedIn = true;
+      this.userService.username = localStorage.getItem('username')
     }
   }
 }
