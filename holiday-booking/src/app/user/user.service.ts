@@ -29,25 +29,25 @@ export class UserService {
     email: string,
     password: string,
     username: string
-): Observable<any> {
+  ): Observable<any> {
     return this.http.post(`http://localhost:3030/users/register`, {
-        email: email,
-        password: password,
-        username: username,
+      email: email,
+      password: password,
+      username: username,
     });
-}
+  }
 
-login(email: string, password: string): Observable<any> {
+  login(email: string, password: string): Observable<any> {
     return this.http.post(`http://localhost:3030/users/login`, { email: email, password: password });
-}
+  }
 
-setToken(key: string, value: string): void {
+  setToken(key: string, value: string): void {
     localStorage.setItem(key, value);
-}
+  }
 
-clearToken(): void {
+  clearToken(): void {
     localStorage.removeItem('accessToken');
-}
+  }
 
   checkLoggedIn(): void {
     if (localStorage.getItem('accessToken')) {
