@@ -18,7 +18,7 @@ export class NavigationComponent {
   logout(): void {
     this.userService.isLoggedIn = false;
     this.userService.username = null;
-    this.apiService.clearToken();
+    this.userService.clearToken();
     console.log('Logout successful!');
     this.router.navigate(['/']);
     this.userService.showMessage('Logged out successfully!');

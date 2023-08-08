@@ -35,15 +35,15 @@ export class LoginComponent {
 
     const value: { email: string; password: string } = form.value;
 
-    this.apiService.login(value.email, value.password).subscribe({
+    this.userService.login(value.email, value.password).subscribe({
       next: (response) => {
         if (response.accessToken) {
           // this.apiService.clearToken();
           this.userService.isLoggedIn = true;
-          this.apiService.setToken('accessToken', response.accessToken);
-          this.apiService.setToken('email', response.email);
-          this.apiService.setToken('userId', response._id);
-          this.apiService.setToken('username', response.username);
+          this.userService.setToken('accessToken', response.accessToken);
+          this.userService.setToken('email', response.email);
+          this.userService.setToken('userId', response._id);
+          this.userService.setToken('username', response.username);
 
           console.log('Login successful!');
           this.router.navigate(['/']);

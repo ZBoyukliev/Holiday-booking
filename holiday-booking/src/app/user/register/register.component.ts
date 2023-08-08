@@ -70,19 +70,19 @@ export class RegisterComponent {
       return;
     }
 
-    this.apiService
+    this.userService
       .userRegister(value.email, value.password, value.username)
       .subscribe({
         next: (response) => {
           if (response.accessToken) {
-            this.apiService.clearToken();
+            this.userService.clearToken();
             this.userService.isLoggedIn = true;
             console.log(this.userService.isLoggedIn);
 
-            this.apiService.setToken('accessToken', response.accessToken);
-            this.apiService.setToken('email', response.email);
-            this.apiService.setToken('userId', response._id);
-            this.apiService.setToken('username', response.username);
+            this.userService.setToken('accessToken', response.accessToken);
+            this.userService.setToken('email', response.email);
+            this.userService.setToken('userId', response._id);
+            this.userService.setToken('username', response.username);
 
             console.log('Registered successfully!');
             this.router.navigate(['/']);
