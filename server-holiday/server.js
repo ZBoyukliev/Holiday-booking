@@ -1370,7 +1370,7 @@
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "title": "UrbanSky Suites",
                 "category": "hotel",
-                "imageUrl": "/assets/home1.avif",
+                "imageUrl": "/assets/city-hotel.jpeg",
                 "descrption": "Elevate city stays. Contemporary design, panoramic skyline vistas, and personalized service redefine urban sophistication.",
                 "_createdOn": 1617194128644,
                 "price": 99.90,
