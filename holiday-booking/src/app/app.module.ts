@@ -13,6 +13,7 @@ import { UserModule } from './user/user.module';
 import { HttpClientModule } from '@angular/common/http';
 import { UserRoutingModule } from './user/user-routing.module';
 import { UserService } from './user/user.service';
+import { HotelRoutingModule } from './hotels/hotel-routing.module';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { UserService } from './user/user.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HotelRoutingModule,
     UserRoutingModule,
     UserModule,
     HttpClientModule,

@@ -21,7 +21,7 @@
           <a class="nav-link" routerLink="/users/register">Register</a>
         </li>
         <li *ngIf="this.userService.isLoggedIn" class="nav-item">
-          <a class="nav-link" routerLink="/">Create-Hotel</a>
+          <a class="nav-link" routerLink="/hotels/create-hotel">Create-Hotel</a>
         </li>
         <li *ngIf="this.userService.isLoggedIn" class="nav-item">
           <a (click)="logout()" class="nav-link" routerLink="/">Logout</a>

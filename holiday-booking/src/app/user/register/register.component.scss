@@ -1,7 +1,8 @@
 @use '../../../scss/buttons' as *;
 
 .register {
-    margin-bottom: 40px;
+    min-height: 64vh;
+    // margin-bottom: 40px;
     width: 60%;
 
     .inputField.error {

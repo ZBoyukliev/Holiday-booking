@@ -1,1 +1,77 @@
-<p>create-hotel works!</p>
+<div class="container create-hotel">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Create Hotel</h3>
+          </div>
+          <div class="card-body">
+            <!-- #createHotelForm="ngForm" (ngSubmit)="onCreateHotelSubmit()" -->
+            <form >
+              <!-- <div *ngIf="errorMessage" class="inputField error">
+                {{ errorMessage }}
+              </div> -->
+              <div class="form-group">
+                <label for="hotelName">Name of the Hotel *</label>
+                <input
+                  type="text"
+                  id="hotelName"
+                  class="form-control"
+                  name="hotelName"
+                >
+                <!-- ngModel
+                required
+                #hotelNameInput="ngModel" -->
+              </div>
+              <!-- <div *ngIf="hotelNameInput.touched" class="inputField error">
+                <div *ngIf="hotelNameInput.errors?.['required']">Name of the Hotel is required!</div>
+              </div> -->
+              
+              <!-- Add input fields for other hotel information (image, price, description) here -->
+  
+              <div class="form-group">
+                <label for="hotelImage">Image *</label>
+                <input
+                  type="text"
+                  id="hotelImage"
+                  class="form-control"
+                  name="hotelImage"
+             
+                >
+                <!-- ngModel
+                required
+                #hotelImageInput="ngModel" -->
+              </div>
+              <!-- <div *ngIf="hotelImageInput.touched" class="inputField error">
+                <div *ngIf="hotelImageInput.errors?.['required']">Image is required!</div>
+              </div> -->
+  
+              <!-- Add more input fields for price, description, etc. here -->
+              <div class="form-group">
+                <label for="hotelDescription">Description *</label>
+                <input
+                  type="text"
+                  id="hotelDescription"
+                  class="form-control"
+                  name="hotelDescription"
+                >
+              </div>
+              <div class="form-group">
+                <label for="hotelPrice">Price *</label>
+                <input
+                  type="text"
+                  id="hotelPrice"
+                  class="form-control"
+                  name="hotelPrice"   
+                >
+              </div>
+              <div class="d-flex">
+                <button type="submit" class="btn btn-block">Create Hotel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
