@@ -10,7 +10,7 @@ import { HotelService } from '../hotel.service';
   styleUrls: ['./create-hotel.component.scss']
 })
 export class CreateHotelComponent implements OnInit {
-  @ViewChild('createHotelForm') newPoemForm: NgForm | undefined;
+  @ViewChild('createHotelForm') newHotelForm: NgForm | undefined;
 
   constructor(
     private userService: UserService,
@@ -19,9 +19,9 @@ export class CreateHotelComponent implements OnInit {
   ) { }
 
   onHotelCreateSubmitHandler(): void {
-    if (!this.newPoemForm) return;
+    if (!this.newHotelForm) return;
 
-    const form = this.newPoemForm;
+    const form = this.newHotelForm;
 
     if (form.invalid) {
       return;
