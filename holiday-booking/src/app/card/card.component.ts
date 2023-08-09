@@ -8,12 +8,13 @@ import { UserService } from '../user/user.service';
 })
 export class CardComponent {
 
-  constructor(public userService: UserService) { }
+  constructor() { }
 
   @Input() hotel: any;
+  @Input() userService!: UserService;
 
   ngOnInit(): void {
-    this.userService.checkLoggedIn();
+    // this.userService.checkLoggedIn();
   }
 
 }

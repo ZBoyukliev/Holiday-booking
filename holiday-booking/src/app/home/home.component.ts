@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HotelService } from '../hotels/hotel.service';
+import { UserService } from '../user/user.service';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,14 @@ import { HotelService } from '../hotels/hotel.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  hotels: any[] = []; 
+  hotels: any[] = [];
 
-  constructor(private hotelService: HotelService) { }
+  constructor(private hotelService: HotelService, public userService: UserService) { }
 
   ngOnInit(): void {
+    this.userService.checkLoggedIn();
     this.getHotels();
+
   }
 
   getHotels(): void {
@@ -20,11 +23,14 @@ export class HomeComponent implements OnInit {
       .subscribe({
         next: (data) => {
           this.hotels = data;
+          console.log(this.hotels);
+
         },
         error: (error) => {
           console.error('Error fetching hotel data:', error);
         }
       });
+    console.log(this.hotels);
   };
 };
 

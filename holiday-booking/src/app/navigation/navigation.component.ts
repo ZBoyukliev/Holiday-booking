@@ -29,13 +29,8 @@ export class NavigationComponent {
   }
 
   ngOnInit(): void {
-    this.userService.checkLoggedIn(); // Check and set user state using a service method
+    this.userService.checkLoggedIn();
+    // Check and set user state using a service method
   }
 
-  // ngOnInit(): void {
-  //   if (localStorage.getItem('accessToken')) {
-  //     this.userService.isLoggedIn = true;
-  //     this.userService.username = localStorage.getItem('username')
-  //   }
-  // }
 }

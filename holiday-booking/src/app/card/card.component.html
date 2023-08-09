@@ -1,10 +1,17 @@
 <div class="card shadow ">
+  <div class="card-img-container">
     <img [src]="hotel.imageUrl" class="card-img-top" alt="{{hotel.title}}">
-    <div class="card-body">
-      <h5 class="card-title">{{hotel.title}}</h5>
-      <p class="card-text">{{hotel.description}}</p>
-      <p class="card-text">{{hotel.price}}</p>
-
-      <a *ngIf="userService.isLoggedIn " href="#" class="btn btn-primary">Details</a>
-    </div>
   </div>
+  <div class="card-body">
+    <h5 class="card-title">{{hotel.title}}</h5>
+    <p class="card-text">{{hotel.description}}</p>
+    <p class="card-text">{{hotel.price}}</p>
+
+    <button *ngIf="userService.isLoggedIn " href="#" class="btn btn-primary">Details</button>
+    <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId"
+      class="btn btn-primary">Edit</button>
+    <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId"
+      class="btn btn-danger">Delete</button>
+
+  </div>
+</div>

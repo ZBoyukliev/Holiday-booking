@@ -12,6 +12,8 @@ import { User } from "../types/user";
 export class UserService {
 
   user: User | undefined;
+  // userId: User | undefined;
+  userId: string | null = null;
   isLoggedIn: boolean = false;
   message: string | null = null;
   username: string | null = null;
@@ -33,12 +35,12 @@ export class UserService {
   userRegister(
     email: string,
     password: string,
-    username: string
+    username: string,
   ): Observable<any> {
     return this.http.post(`http://localhost:3030/users/register`, {
       email: email,
       password: password,
-      username: username,
+      username: username
     });
   }
 
@@ -58,6 +60,7 @@ export class UserService {
     if (localStorage.getItem('accessToken')) {
       this.isLoggedIn = true;
       this.username = localStorage.getItem('username');
+      this.userId = localStorage.getItem('userId'); 
     }
   };
 
