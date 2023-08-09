@@ -67,7 +67,7 @@ export class RegisterComponent {
         this.registrationError = false;
       }, 3000);
 
-      return;
+      // return;
     }
 
     this.userService

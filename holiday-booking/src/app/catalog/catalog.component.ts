@@ -7,7 +7,7 @@ import { HotelService } from '../hotels/hotel.service';
   styleUrls: ['./catalog.component.scss']
 })
 export class CatalogComponent {
-  hotels: any[] = []; // Assuming your hotel data is an array of objects
+  hotels: any[] = []; 
 
   constructor(private hotelService: HotelService) { }
 
@@ -16,16 +16,27 @@ export class CatalogComponent {
   }
 
   getHotels(): void {
-    this.hotelService.getHotels().subscribe(
-      (data) => {
-        this.hotels = data; // Assign the fetched hotel data to the 'hotels' array
-        console.log(data);
-        console.log(this.hotels);
+    this.hotelService.getHotels()
+      .subscribe({
+        next: (data) => {
+          this.hotels = data;
+        },
+        error: (error) => {
+          console.error('Error fetching hotel data:', error);
+        }
+      });
+  };
+  // getHotels(): void {
+  //   this.hotelService.getHotels().subscribe(
+  //     (data) => {
+  //       this.hotels = data;
+  //       console.log(data);
+  //       console.log(this.hotels);
         
-      },
-      (error) => {
-        console.error('Error fetching hotel data:', error);
-      }
-    );
-  }
+  //     },
+  //     (error) => {
+  //       console.error('Error fetching hotel data:', error);
+  //     }
+  //   );
+  // }
 }
