@@ -19,6 +19,8 @@ export class CreateHotelComponent implements OnInit {
   ) { }
 
   onHotelCreateSubmitHandler(): void {
+    console.log('clicked');
+    
     if (!this.newHotelForm) return;
 
     const form = this.newHotelForm;
@@ -35,10 +37,10 @@ export class CreateHotelComponent implements OnInit {
       this.router.navigate(['/']);
     }
 
-    let submitData: { hotelName: string; imageUrl: string; description: string , price: number} =
+    let submitData: { title: string; imageUrl: string; description: string, price: number } =
       form.value;
 
-    this.hotelService.createHotel(submitData).subscribe({
+    this.hotelService.createHotel(submitData).subscribe({      
       next: (response) => {
         this.router.navigate([`/catalog`]);
         this.userService.showMessage('Posted successfully!');
