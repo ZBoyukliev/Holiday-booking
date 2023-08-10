@@ -5,7 +5,7 @@
   <div class="card-body">
     <h5 class="card-title">{{hotel.title}}</h5>
     <p class="card-text">{{hotel.description}}</p>
-    <p class="card-text">{{hotel.price}}</p>
+    <p class="card-text price">Price per night: ${{hotel.price}}</p>
 
     <button *ngIf="userService.isLoggedIn " [routerLink]="['/hotels', hotel._id]"
       class="btn btn-primary">Details</button>

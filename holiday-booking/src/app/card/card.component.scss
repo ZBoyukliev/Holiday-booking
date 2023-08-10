@@ -3,6 +3,10 @@
 .card {
     max-width: 400px;
     margin: 0 auto;
+    .price {
+        color: black;
+        font-size: larger;
+    }
 }
 // .card.card-shadow {
 //     justify-content: space-around;
