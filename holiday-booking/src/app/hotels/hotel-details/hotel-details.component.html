@@ -1,1 +1,15 @@
-<p>hotel-details works!</p>
+<!-- <div class="hotel-details-bg" [style.background-image]="'url(' + hotel.imageUrl + ')'"> -->
+    <div class="container details-container my-5">
+        <div class="row">
+          <div class="col-md-6">
+            <img [src]="hotel.imageUrl" class="img-fluid" alt="Hotel Image">
+          </div>
+          <div class="col-md-6">
+            <h1>{{ hotel.title }}</h1>
+            <p class="lead">{{ hotel.description }}</p>
+            <p>Price: {{ hotel.price }}</p>
+          </div>
+        </div>
+      </div>
+      
+  <!-- </div> -->
