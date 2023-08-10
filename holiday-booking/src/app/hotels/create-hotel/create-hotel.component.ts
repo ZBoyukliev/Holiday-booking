@@ -23,7 +23,6 @@ export class CreateHotelComponent implements OnInit {
   ) { }
 
   onHotelCreateSubmitHandler(): void {
-    console.log('clicked');
     
     if (!this.newHotelForm) return;
 
@@ -34,7 +33,7 @@ export class CreateHotelComponent implements OnInit {
       this.errorMessage = 'All fields are required!';
        return;
     }
-
+    
     if (!localStorage.getItem('accessToken')) {
       this.userService.isLoggedIn = false;
       this.userService.clearToken();

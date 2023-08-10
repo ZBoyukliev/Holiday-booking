@@ -1,1 +1,74 @@
-<p>edit-hotel works!</p>
+<div class="container edit-hotel">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+                 <h2>Edit Hotel</h2>
+             </div>
+       <div class="card-body">
+         <form (ngSubmit)="updateHotel()" #editForm="ngForm">
+          <div class="form-group">
+                 <label for="title">Name of the Hotel *</label>
+                 <input type="text" class="form-control" id="title" name="title" [(ngModel)]="hotel.title" required>
+          </div>
+          
+        <div class="form-group">
+          <label for="imageUrl">Image *</label>
+          <input
+            type="text"
+            id="imageUrl"
+            class="form-control"
+            name="imageUrl"
+            [(ngModel)]="hotel.imageUrl"
+            minlength="5"
+            required
+            #imageUrlInput="ngModel"
+          >
+        </div>
+        <div *ngIf="imageUrlInput.touched" class="inputField error">
+          <p *ngIf="imageUrlInput.errors?.['required']">Image is required!</p>
+          <p *ngIf="imageUrlInput.errors?.['minlength']">Image must be at least 5 characters long!!</p>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description *</label>
+          <input
+            type="text"
+            id="description"
+            class="form-control"
+            name="description"
+            [(ngModel)]="hotel.description"
+            minlength="10"
+            maxlength="30"
+            required
+            #descriptionInput="ngModel"
+          >
+          <div *ngIf="descriptionInput.touched" class="inputField error">
+            <p *ngIf="descriptionInput.errors?.['required']">Please enter short description !</p>
+            <p *ngIf="descriptionInput.errors?.['minlength']">Description must be between 10 and 30 characters long!!</p>
+          </div>
+
+        </div>
+        <div class="form-group">
+          <label for="price">Price *</label>
+          <input
+            type="text"
+            id="price"
+            class="form-control"
+            name="price"   
+            [(ngModel)]="hotel.price"
+            required
+            #priceInput="ngModel"
+          >
+          <div *ngIf="priceInput.touched" class="inputField error">
+            <p *ngIf="priceInput.errors?.['required']">Enter the price per night !</p>
+          </div>
+        </div>
+      <button type="submit" class="btn btn-primary">Update Hotel</button>
+     </form>
+    </div>
+  </div>
+ </div>
+
+</div>
+  
