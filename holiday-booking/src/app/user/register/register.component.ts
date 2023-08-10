@@ -87,9 +87,6 @@ export class RegisterComponent {
             console.log('Registered successfully!');
             this.router.navigate(['/']);
             this.userService.showMessage('Registered successfully!');
-
-            this.router.navigate(['/']);
-            this.userService.showMessage('Registered successfully!');
           }
         },
         error: (error) => {

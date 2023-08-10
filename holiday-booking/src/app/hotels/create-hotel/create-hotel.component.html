@@ -8,9 +8,9 @@
           <div class="card-body">
           
             <form   #createHotelForm="ngForm" (ngSubmit)="onHotelCreateSubmitHandler()">
-              <!-- <div *ngIf="errorMessage" class="inputField error">
+              <div *ngIf="errorMessage" class="inputField error">
                 {{ errorMessage }}
-              </div> -->
+              </div>
               <div class="form-group">
                 <label for="title">Name of the Hotel *</label>
                 <input
@@ -78,6 +78,9 @@
                   required
                   #priceInput="ngModel"
                 >
+                <div *ngIf="priceInput.touched" class="inputField error">
+                  <p *ngIf="priceInput.errors?.['required']">Enter the price per night !</p>
+                </div>
               </div>
               <div class="d-flex">
                 <button type="submit" class="btn btn-primary">Create Hotel</button>

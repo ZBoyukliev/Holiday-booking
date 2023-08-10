@@ -10,6 +10,10 @@ import { HotelService } from '../hotel.service';
   styleUrls: ['./create-hotel.component.scss']
 })
 export class CreateHotelComponent implements OnInit {
+
+  errorMessage: string = '';
+  showErrorMessage: boolean = false;
+
   @ViewChild('createHotelForm') newHotelForm: NgForm | undefined;
 
   constructor(
@@ -26,6 +30,8 @@ export class CreateHotelComponent implements OnInit {
     const form = this.newHotelForm;
 
     if (form.invalid) {
+      this.showErrorMessage = true;
+      this.errorMessage = 'All fields are required!';
       return;
     }
 
@@ -39,6 +45,15 @@ export class CreateHotelComponent implements OnInit {
 
     let submitData: { title: string; imageUrl: string; description: string, price: number } =
       form.value;
+
+      if (submitData.title === '' && submitData.imageUrl === '' && submitData.description === '' && submitData.price === 0) {
+        this.showErrorMessage = true;
+        this.errorMessage = 'All fields are required!';
+        this.userService.showMessage(this.errorMessage);
+        console.log(this.errorMessage);
+        
+        return;
+      }
 
     this.hotelService.createHotel(submitData).subscribe({      
       next: (response) => {
