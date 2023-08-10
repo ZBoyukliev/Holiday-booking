@@ -32,7 +32,7 @@ export class CreateHotelComponent implements OnInit {
     if (form.invalid) {
       this.showErrorMessage = true;
       this.errorMessage = 'All fields are required!';
-      return;
+       return;
     }
 
     if (!localStorage.getItem('accessToken')) {
@@ -48,10 +48,7 @@ export class CreateHotelComponent implements OnInit {
 
       if (submitData.title === '' && submitData.imageUrl === '' && submitData.description === '' && submitData.price === 0) {
         this.showErrorMessage = true;
-        this.errorMessage = 'All fields are required!';
-        this.userService.showMessage(this.errorMessage);
-        console.log(this.errorMessage);
-        
+        this.errorMessage = 'All fields are required!';    
         return;
       }
 
