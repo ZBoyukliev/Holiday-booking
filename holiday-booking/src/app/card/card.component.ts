@@ -29,21 +29,18 @@ export class CardComponent {
   }
 
   deleteHotel(): void {
-    // if (this.hotel._id) {
+    window.confirm('Are sure you want to delete the hotel ? It will be deleted permanently!')
     this.hotelService.deleteHotel(this.hotel._id).subscribe({
       next: () => {
         console.log('Hotel deleted successfully');
+        this.isDeleteModalOpen = false; 
         this.hotelDeleted.emit();
       },
       error: (error) => {
         console.error('Error deleting hotel:', error);
       }
     });
-    // } else {
-    //   console.error('Invalid hotel ID');
-    // }
 
-    // this.closeDeleteModal(); 
   }
   ngOnInit(): void {
     this.userService.checkLoggedIn();

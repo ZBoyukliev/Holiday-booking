@@ -14,7 +14,7 @@
     <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId" (click)="deleteHotel()"
       class="btn btn-danger">Delete</button>
     <!-- Add a modal for confirmation -->
-    <div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': isDeleteModalOpen}">
+    <!-- <div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': isDeleteModalOpen}">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     
     <!-- <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId"
       class="btn btn-danger">Delete</button> -->
