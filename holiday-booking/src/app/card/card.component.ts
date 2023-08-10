@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { UserService } from '../user/user.service';
 import { HotelService } from '../hotels/hotel.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -9,16 +10,17 @@ import { HotelService } from '../hotels/hotel.service';
 })
 export class CardComponent {
 
-  constructor(private hotelService: HotelService) { }
+  constructor(private hotelService: HotelService, private router: Router) { }
 
   @Input() hotel: any;
   @Input() userService!: UserService;
+  @Output() hotelDeleted: EventEmitter<void> = new EventEmitter<void>();
 
   isDeleteModalOpen = false;
 
   showDeleteConfirmation(): void {
     console.log('clicked show');
-    
+
     this.isDeleteModalOpen = true;
   }
 
@@ -28,16 +30,15 @@ export class CardComponent {
 
   deleteHotel(): void {
     // if (this.hotel._id) {
-      this.hotelService.deleteHotel(this.hotel._id).subscribe({
-        next: () => {
-          console.log('Hotel deleted successfully');
-          // Optionally, you can emit an event to notify the parent component to refresh the hotels list
-          // this.deleted.emit(this.hotel._id);
-        },
-        error: (error) => {
-          console.error('Error deleting hotel:', error);
-        }
-      });
+    this.hotelService.deleteHotel(this.hotel._id).subscribe({
+      next: () => {
+        console.log('Hotel deleted successfully');
+        this.hotelDeleted.emit();
+      },
+      error: (error) => {
+        console.error('Error deleting hotel:', error);
+      }
+    });
     // } else {
     //   console.error('Invalid hotel ID');
     // }
@@ -45,7 +46,7 @@ export class CardComponent {
     // this.closeDeleteModal(); 
   }
   ngOnInit(): void {
-    this.userService.checkLoggedIn();   
+    this.userService.checkLoggedIn();
     console.log(this.hotel._id);
 
   }

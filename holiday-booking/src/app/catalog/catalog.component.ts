@@ -31,5 +31,8 @@ export class CatalogComponent {
         }
       });
   };
+  refreshHotels(): void {
+    this.getHotels(); 
+  }
 
 }
