@@ -33,4 +33,15 @@ export class HotelService {
       headers: headers,
     });
   };
+
+  deleteHotel(hotelId: string): Observable<any> {
+    const headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('X-Authorization', '' + localStorage.getItem('accessToken'));
+  
+    return this.http.delete(`${this.apiUrl}/${hotelId}`, {
+      headers: headers,
+    });
+  }
+  
 }

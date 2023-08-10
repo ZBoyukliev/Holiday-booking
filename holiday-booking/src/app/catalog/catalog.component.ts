@@ -15,6 +15,7 @@ export class CatalogComponent {
   }
 
   ngOnInit(): void {
+    this.userService.checkLoggedIn();   
     this.getHotels();
   }
 
