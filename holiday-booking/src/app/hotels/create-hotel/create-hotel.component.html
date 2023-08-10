@@ -20,15 +20,16 @@
                   name="title"
                   ngModel
                   required
+                  minlength="3"
+                  maxlength="20"
                   #hotelNameInput="ngModel"
                 >
               </div>
-              <!-- <div *ngIf="hotelNameInput.touched" class="inputField error">
-                <div *ngIf="hotelNameInput.errors?.['required']">Name of the Hotel is required!</div>
-              </div> -->
-              
-              <!-- Add input fields for other hotel information (image, price, description) here -->
-  
+              <div *ngIf="hotelNameInput.touched" class="inputField error">
+                <p *ngIf="hotelNameInput.errors?.['required']">Name of the Hotel is required!</p>
+                <p *ngIf="hotelNameInput.errors?.['minlength']">Hotel name must be at least 3 characters long and no longer than 20!!</p>
+              </div>
+                
               <div class="form-group">
                 <label for="imageUrl">Image *</label>
                 <input
@@ -37,15 +38,16 @@
                   class="form-control"
                   name="imageUrl"
                   ngModel
+                  minlength="5"
                   required
                   #imageUrlInput="ngModel"
                 >
               </div>
-              <!-- <div *ngIf="hotelImageInput.touched" class="inputField error">
-                <div *ngIf="hotelImageInput.errors?.['required']">Image is required!</div>
-              </div> -->
+              <div *ngIf="imageUrlInput.touched" class="inputField error">
+                <p *ngIf="imageUrlInput.errors?.['required']">Image is required!</p>
+                <p *ngIf="imageUrlInput.errors?.['minlength']">Image must be at least 5 characters long!!</p>
+              </div>
   
-              <!-- Add more input fields for price, description, etc. here -->
               <div class="form-group">
                 <label for="description">Description *</label>
                 <input
@@ -54,9 +56,16 @@
                   class="form-control"
                   name="description"
                   ngModel
+                  minlength="10"
+                  maxlength="30"
                   required
                   #descriptionInput="ngModel"
                 >
+                <div *ngIf="descriptionInput.touched" class="inputField error">
+                  <p *ngIf="descriptionInput.errors?.['required']">Please enter short description !</p>
+                  <p *ngIf="descriptionInput.errors?.['minlength']">Description must be between 10 and 30 characters long!!</p>
+                </div>
+
               </div>
               <div class="form-group">
                 <label for="price">Price *</label>
