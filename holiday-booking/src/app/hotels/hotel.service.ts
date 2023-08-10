@@ -39,7 +39,7 @@ export class HotelService {
       .set('Content-Type', 'application/json')
       .set('X-Authorization','' + localStorage.getItem('accessToken'));
   
-    return this.http.put(`${this.apiUrl}/edit-hotel/${id}`, data, {
+    return this.http.put(`${this.apiUrl}/${id}`, data, {
       headers: headers,
     });
   }

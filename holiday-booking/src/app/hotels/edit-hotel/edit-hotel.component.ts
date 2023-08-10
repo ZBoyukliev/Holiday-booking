@@ -38,7 +38,7 @@ export class EditHotelComponent implements OnInit {
       this.hotelService.updateHotel(this.hotelId, this.hotel).subscribe({
         next: () => {
           console.log('Hotel updated successfully');
-          this.router.navigate(['/hotels']); // Navigate back to the hotels list
+          this.router.navigate(['/catalog']); // Navigate back to the hotels list
         },
         error: (error) => {
           console.error('Error updating hotel:', error);
