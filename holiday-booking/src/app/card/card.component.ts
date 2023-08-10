@@ -14,7 +14,9 @@ export class CardComponent {
   @Input() userService!: UserService;
 
   ngOnInit(): void {
-    // this.userService.checkLoggedIn();
+    // this.userService.checkLoggedIn();   
+    console.log(this.hotel._id);
+     
   }
 
 }

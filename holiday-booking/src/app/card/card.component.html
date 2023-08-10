@@ -7,7 +7,7 @@
     <p class="card-text">{{hotel.description}}</p>
     <p class="card-text">{{hotel.price}}</p>
 
-    <button *ngIf="userService.isLoggedIn " href="#" class="btn btn-primary">Details</button>
+    <button *ngIf="userService.isLoggedIn " [routerLink]="['/hotels', hotel._id]" class="btn btn-primary">Details</button>
     <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId"
       class="btn btn-primary">Edit</button>
     <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId"

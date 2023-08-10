@@ -4,13 +4,15 @@ import { CreateHotelComponent } from './create-hotel/create-hotel.component';
 import { EditHotelComponent } from './edit-hotel/edit-hotel.component';
 import { HotelRoutingModule } from './hotel-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
 
 
 
 @NgModule({
   declarations: [
     CreateHotelComponent,
-    EditHotelComponent
+    EditHotelComponent,
+    HotelDetailsComponent
   ],
   imports: [
     CommonModule,

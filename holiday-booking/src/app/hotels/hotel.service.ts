@@ -13,6 +13,11 @@ export class HotelService {
 
   getHotels(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
+  };
+
+  getHotelById(id: string): Observable<any> {
+    
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
 
   createHotel(inputData: {}): Observable<any> {
@@ -27,5 +32,5 @@ export class HotelService {
     return this.http.post(`${this.apiUrl}`, requestData, {
       headers: headers,
     });
-  }
+  };
 }
