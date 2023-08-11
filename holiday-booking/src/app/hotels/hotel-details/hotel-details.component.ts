@@ -26,7 +26,6 @@ export class HotelDetailsComponent {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.hotelId = params['id'];
-      console.log(this.hotelId);
 
       if (this.hotelId) {
         console.log('clicked');

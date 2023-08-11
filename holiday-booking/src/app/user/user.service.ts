@@ -49,9 +49,7 @@ export class UserService {
   }
 
   isAuthenticated(): boolean {
-  
        return this.isLoggedIn; 
-     
   }
 
   setToken(key: string, value: string): void {
