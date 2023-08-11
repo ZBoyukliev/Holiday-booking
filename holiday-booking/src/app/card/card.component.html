@@ -9,7 +9,7 @@
 
     <button *ngIf="userService.isLoggedIn" [routerLink]="['/hotels/details', hotel._id]"
       class="btn btn-primary">Details</button>
-    <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId " [routerLink]="['/edit-hotel', hotel._id]"
+    <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId " [routerLink]="['/hotels/edit-hotel', hotel._id]"
       class="btn btn-primary">Edit</button>
     <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId" (click)="deleteHotel()"
       class="btn btn-danger">Delete</button>
