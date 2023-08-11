@@ -12,6 +12,8 @@ export class HotelDetailsComponent {
   hotelId: string | null = null;
   hotel: any;
   isDeleteModalOpen = false;
+  isLiked: boolean = false;
+  likesCount: number = 0;
 
   showDeleteConfirmation(): void {
     this.isDeleteModalOpen = true;
@@ -65,6 +67,14 @@ export class HotelDetailsComponent {
     }
 
     this.closeDeleteModal();
+  }
+  toggleLike(): void {
+    if (this.isLiked) {
+      this.likesCount--;
+    } else {
+      this.likesCount++;
+    }
+    this.isLiked = !this.isLiked;
   }
 
 }

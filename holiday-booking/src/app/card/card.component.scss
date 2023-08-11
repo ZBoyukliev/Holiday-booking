@@ -3,11 +3,22 @@
 .card {
     max-width: 380px;
     margin: 0 auto;
+
     .price {
         color: black;
         font-size: larger;
     }
+
+    .btn-edit {
+        background: green;
+        color: white;
+    }
+    .btn-delete {
+        background: red;
+        color: white;
+    }
 }
+
 // .card.card-shadow {
 //     justify-content: space-around;
 // }
