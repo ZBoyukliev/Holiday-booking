@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuard } from './guards/authGuard';
+import { AuthenticatedGuard } from './guards/authActive';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
@@ -11,11 +12,14 @@ const routes: Routes = [
   { path: 'catalog', component: CatalogComponent },
   {
     path: 'users',
-    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule), 
+    canActivate: [AuthenticatedGuard],
+
   },
   {
     path: 'hotels',
-    loadChildren: () => import('./hotels/hotel.module').then((m) => m.HotelModule), canActivate: [AuthGuard],
+    loadChildren: () => import('./hotels/hotel.module').then((m) => m.HotelModule), 
+    canActivate: [AuthGuard],
   },
   { path: '**', component: PageNotFoundComponent },
 ];
