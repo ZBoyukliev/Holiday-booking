@@ -26,8 +26,9 @@ export class CardComponent {
     this.isDeleteModalOpen = false;
   }
 
+
   deleteHotel(): void {
-    window.confirm('Are sure you want to delete the hotel ? It will be deleted permanently!')
+    window.confirm('Are you sure you want to delete the hotel permanently!') &&
     this.hotelService.deleteHotel(this.hotel._id)
     .subscribe({
       next: () => {
