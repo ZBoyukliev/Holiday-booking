@@ -19,8 +19,6 @@ export class CardComponent {
   isDeleteModalOpen = false;
 
   showDeleteConfirmation(): void {
-    console.log('clicked show');
-
     this.isDeleteModalOpen = true;
   }
 
@@ -34,7 +32,6 @@ export class CardComponent {
     .subscribe({
       next: () => {
         console.log('Hotel deleted successfully');
-        this.isDeleteModalOpen = false; 
         this.hotelDeleted.emit();
       },
       error: (error) => {

@@ -48,6 +48,12 @@ export class UserService {
     return this.http.post(`http://localhost:3030/users/login`, { email: email, password: password });
   }
 
+  isAuthenticated(): boolean {
+  
+       return this.isLoggedIn; 
+     
+  }
+
   setToken(key: string, value: string): void {
     localStorage.setItem(key, value);
   }

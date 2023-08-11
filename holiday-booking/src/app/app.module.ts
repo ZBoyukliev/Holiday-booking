@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserRoutingModule } from './user/user-routing.module';
 import { UserService } from './user/user.service';
 import { HotelRoutingModule } from './hotels/hotel-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { HotelRoutingModule } from './hotels/hotel-routing.module';
     CardComponent,
     FooterComponent,
     CatalogComponent,
+    PageNotFoundComponent,
    
   ],
   imports: [
