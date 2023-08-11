@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HotelService } from '../hotel.service';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/user/user.service';
 
 @Component({
   selector: 'app-hotel-details',
@@ -11,27 +12,17 @@ import { Router } from '@angular/router';
 export class HotelDetailsComponent {
   hotelId: string | null = null;
   hotel: any;
-  isDeleteModalOpen = false;
   isLiked: boolean = false;
+  isOwner: boolean = false;
   likesCount: number = 0;
 
-  showDeleteConfirmation(): void {
-    this.isDeleteModalOpen = true;
-  }
-
-  closeDeleteModal(): void {
-    this.isDeleteModalOpen = false;
-  }
-
-  constructor(private route: ActivatedRoute, private router: Router, private hotelService: HotelService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private hotelService: HotelService, private userService: UserService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.hotelId = params['id'];
 
       if (this.hotelId) {
-        console.log('clicked');
-
         this.getHotelDetails(this.hotelId);
       }
     });
@@ -42,8 +33,10 @@ export class HotelDetailsComponent {
       .subscribe({
         next: (data) => {
           this.hotel = data;
-          console.log(this.hotel);
-
+          if(this.hotel._ownerId === this.userService.userId) {
+            this.isOwner = true;
+          }
+          
         },
         error: (error) => {
           console.error('Error fetching hotel details:', error);
@@ -65,9 +58,8 @@ export class HotelDetailsComponent {
     } else {
       console.error('Invalid hotel ID');
     }
+  };
 
-    this.closeDeleteModal();
-  }
   toggleLike(): void {
     if (this.isLiked) {
       this.likesCount--;

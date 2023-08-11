@@ -43,8 +43,6 @@ export class CardComponent {
   }
   ngOnInit(): void {
     this.userService.checkLoggedIn();
-    console.log(this.hotel._id);
-
   }
 }
 
