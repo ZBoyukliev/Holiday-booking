@@ -12,13 +12,13 @@ const routes: Routes = [
   { path: 'catalog', component: CatalogComponent },
   {
     path: 'users',
-    loadChildren: () => import('./user/user.module').then((m) => m.UserModule), 
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
     canActivate: [AuthenticatedGuard],
 
   },
   {
     path: 'hotels',
-    loadChildren: () => import('./hotels/hotel.module').then((m) => m.HotelModule), 
+    loadChildren: () => import('./hotels/hotel.module').then((m) => m.HotelModule),
     canActivate: [AuthGuard],
   },
   { path: '**', component: PageNotFoundComponent },
