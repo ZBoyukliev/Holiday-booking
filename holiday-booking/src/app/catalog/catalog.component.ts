@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HotelService } from '../hotels/hotel.service';
 import { UserService } from '../user/user.service';
+import { Hotel } from '../types/hotel';
 
 @Component({
   selector: 'app-catalog',
@@ -8,7 +9,7 @@ import { UserService } from '../user/user.service';
   styleUrls: ['./catalog.component.scss']
 })
 export class CatalogComponent {
-  hotels: any[] = [];
+  hotels: Hotel[] = [];
 
   constructor(private hotelService: HotelService, public userService: UserService) {
     this.userService = userService; 
