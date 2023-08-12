@@ -54,6 +54,6 @@ export class HotelService {
     return this.http.delete(`${this.apiUrl}/${hotelId}`, {
       headers: headers,
     });
-  }
+  };
   
 }

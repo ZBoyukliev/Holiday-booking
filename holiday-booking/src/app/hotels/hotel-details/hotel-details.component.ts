@@ -22,21 +22,30 @@ export class HotelDetailsComponent {
     this.route.params.subscribe(params => {
       this.hotelId = params['id'];
 
-      if (this.hotelId) {
+      if (this.hotelId !== null) { // Check for null
         this.getHotelDetails(this.hotelId);
       }
     });
   }
+  // ngOnInit(): void {
+  //   this.route.params.subscribe(params => {
+  //     this.hotelId = params['id'];
+
+  //     if (this.hotelId) {
+  //       this.getHotelDetails(this.hotelId);
+  //     }
+  //   });
+  // }
 
   getHotelDetails(id: string): void {
     this.hotelService.getHotelById(id)
       .subscribe({
         next: (data) => {
           this.hotel = data;
-          if(this.hotel._ownerId === this.userService.userId) {
+          if (this.hotel._ownerId === this.userService.userId) {
             this.isOwner = true;
           }
-          
+
         },
         error: (error) => {
           console.error('Error fetching hotel details:', error);
@@ -59,6 +68,7 @@ export class HotelDetailsComponent {
       console.error('Invalid hotel ID');
     }
   };
+
 
   toggleLike(): void {
     if (this.isLiked) {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HotelService } from '../hotel.service';
+import { Hotel } from 'src/app/types/hotel';
 
 @Component({
   selector: 'app-edit-hotel',

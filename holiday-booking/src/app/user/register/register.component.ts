@@ -1,7 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { UserService } from '../user.service';
 import { NgForm } from '@angular/forms'
-import { ApiService } from 'src/app/api.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -25,7 +24,6 @@ export class RegisterComponent {
   allFields: boolean = false;
 
   constructor(
-    private apiService: ApiService,
     private userService: UserService,
     private router: Router
   ) { }
@@ -67,7 +65,7 @@ export class RegisterComponent {
         this.registrationError = false;
       }, 3000);
 
-      // return;
+     return
     }
 
     this.userService
@@ -90,7 +88,8 @@ export class RegisterComponent {
           }
         },
         error: (error) => {
-          this.userService.showMessage(error.error.message);
+          // this.userService.showMessage(error.error.message);
+          this.errorMessage = error.error.message;
         },
       });
     this.showPasswordMatchMessage = true;
