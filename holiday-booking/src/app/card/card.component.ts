@@ -16,15 +16,15 @@ export class CardComponent {
   @Input() userService!: UserService;
   @Output() hotelDeleted: EventEmitter<void> = new EventEmitter<void>();
 
-  isDeleteModalOpen = false;
+  // isDeleteModalOpen = false;
 
-  showDeleteConfirmation(): void {
-    this.isDeleteModalOpen = true;
-  }
+  // showDeleteConfirmation(): void {
+  //   this.isDeleteModalOpen = true;
+  // }
 
-  closeDeleteModal(): void {
-    this.isDeleteModalOpen = false;
-  }
+  // closeDeleteModal(): void {
+  //   this.isDeleteModalOpen = false;
+  // }
 
 
   deleteHotel(): void {

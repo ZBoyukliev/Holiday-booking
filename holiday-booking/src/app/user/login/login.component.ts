@@ -53,9 +53,9 @@ export class LoginComponent {
       error: (error) => {
         this.userService.showMessage(error.error.message);
         this.errorMessage = error.error.message
-        setTimeout(() => {
-          this.errorMessage = '';
-        },3000)
+        // setTimeout(() => {
+        //   this.errorMessage = '';
+        // }, 3000)
       },
     });
   }
