@@ -115,6 +115,12 @@ export class HotelDetailsComponent {
         console.error('Error liking hotel:', error);
       }
     });
+    this.likesService.getAllLikes().subscribe({
+      next: (data) => {
+        console.log('data: ', data);
+        this.likes = data;
+      }
+    })
     
   }
   dislikeHotel(): void {
@@ -127,7 +133,7 @@ export class HotelDetailsComponent {
         next: () => {
           this.isLiked = false;
           this.likesCount--;
-          // Remove the disliked like object from the likes array
+          
           this.likes = this.likes.filter((l: any) => l !== like);
         },
         error: (error) => {
