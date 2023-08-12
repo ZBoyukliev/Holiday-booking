@@ -36,16 +36,16 @@ export class UserService {
     email: string,
     password: string,
     username: string,
-  ): Observable<any> {
-    return this.http.post(`http://localhost:3030/users/register`, {
+  ): Observable<User> {
+    return this.http.post<User>(`http://localhost:3030/users/register`, {
       email: email,
       password: password,
       username: username
     });
   }
 
-  login(email: string, password: string): Observable<any> {
-    return this.http.post(`http://localhost:3030/users/login`, { email: email, password: password });
+  login(email: string, password: string): Observable<User> {
+    return this.http.post<User>(`http://localhost:3030/users/login`, { email: email, password: password });
   }
 
   isAuthenticated(): boolean {

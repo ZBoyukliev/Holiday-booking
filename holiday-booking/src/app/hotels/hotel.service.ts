@@ -16,9 +16,9 @@ export class HotelService {
     return this.http.get<Hotel[]>(this.apiUrl);
   };
 
-  getHotelById(id: string): Observable<any> {
+  getHotelById(id: string): Observable<Hotel> {
     
-    return this.http.get<any>(`${this.apiUrl}/${id}`);
+    return this.http.get<Hotel>(`${this.apiUrl}/${id}`);
   }
 
   createHotel(inputData: {}): Observable<any> {
