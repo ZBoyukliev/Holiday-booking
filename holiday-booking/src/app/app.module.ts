@@ -15,7 +15,6 @@ import { UserRoutingModule } from './user/user-routing.module';
 import { UserService } from './user/user.service';
 import { HotelRoutingModule } from './hotels/hotel-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { SpinerComponent } from './spiner/spiner.component';
 
 
 @NgModule({
@@ -27,9 +26,7 @@ import { SpinerComponent } from './spiner/spiner.component';
     CardComponent,
     FooterComponent,
     CatalogComponent,
-    PageNotFoundComponent,
-    SpinerComponent,
-   
+    PageNotFoundComponent,   
   ],
   imports: [
     BrowserModule,

@@ -27,31 +27,37 @@ export class HotelDetailsComponent {
   ) { }
 
   ngOnInit(): void {
+   console.log('default');
    
     this.route.params.subscribe(params => {
-      
       this.hotelId = params['id'];
       this.likesService.getAllLikes().subscribe({
         next: (data) => {
           this.likes = data;
+          console.log('Get all likes');
+          
         }
       })
 
       if (this.hotelId !== null) {
         this.getHotelDetails(this.hotelId);
+        console.log('Go to details page');
+
       }
     });
 
     this.likesService.getLikesByHotelId(this.hotelId!).subscribe({
       next: (data) => {
         this.likesCount = data
+        console.log('get likes count by id');
+        
       }
     })
-
 
     this.likesService.getMyLikeByHotelId(this.hotelId!, this.userService.userId!).subscribe({
       next: (data) => {
         data === 0 ? this.isLiked = false : this.isLiked = true;
+        console.log('Get My likes by hotelId && userId', data);
       }
     })
   }
@@ -97,10 +103,11 @@ export class HotelDetailsComponent {
       }
   }
 
-
   likeHotel(): void {
+     
     this.likesService.likeHotel(this.hotelId!).subscribe({
-      next: () => {
+      next: (data) => {
+        console.log(data)
         this.isLiked = true;
         this.likesCount++;
       },
@@ -108,15 +115,20 @@ export class HotelDetailsComponent {
         console.error('Error liking hotel:', error);
       }
     });
+    
   }
-  
   dislikeHotel(): void {
-    const like = this.likes.find((like:any) => like._ownerId === this.userService.userId && like.hotelId === this.hotelId);
+    const like = this.likes.find(
+      (like: any) => like._ownerId === this.userService.userId && like.hotelId === this.hotelId
+    );
+  
     if (like) {
       this.likesService.dislikeHotel(like._id).subscribe({
         next: () => {
           this.isLiked = false;
           this.likesCount--;
+          // Remove the disliked like object from the likes array
+          this.likes = this.likes.filter((l: any) => l !== like);
         },
         error: (error) => {
           console.error('Error disliking hotel:', error);
@@ -125,13 +137,22 @@ export class HotelDetailsComponent {
     }
   }
   
-  // toggleLike(): void {
-  //   if (this.isLiked) {
-  //     this.likesCount--;
-  //   } else {
-  //     this.likesCount++;
+  // dislikeHotel(): void {
+    
+  //   const like = this.likes.find((like:any) => like._ownerId === this.userService.userId && like.hotelId === this.hotelId);
+  //   console.log(like);
+    
+  //   if(like) {
+  //     this.likesService.dislikeHotel(like._id).subscribe({
+  //       next: () => {
+  //         this.isLiked = false;
+  //         this.likesCount--;
+  //       },
+  //       error: (error) => {
+  //         console.error('Error disliking hotel:', error);
+  //       }
+  //     });
   //   }
-  //   this.isLiked = !this.isLiked;
   // }
-
+  
 }
