@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { HotelService } from '../hotel.service';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/user/user.service';
+import { LikesService } from '../likes.service';
 
 @Component({
   selector: 'app-hotel-details',
@@ -15,27 +16,45 @@ export class HotelDetailsComponent {
   isLiked: boolean = false;
   isOwner: boolean = false;
   likesCount: number = 0;
+  likes: any[] = []
 
-  constructor(private route: ActivatedRoute, private router: Router, private hotelService: HotelService, private userService: UserService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private likesService: LikesService,
+    private router: Router,
+    private hotelService: HotelService,
+    private userService: UserService
+  ) { }
 
   ngOnInit(): void {
+   
     this.route.params.subscribe(params => {
+      
       this.hotelId = params['id'];
+      this.likesService.getAllLikes().subscribe({
+        next: (data) => {
+          this.likes = data;
+        }
+      })
 
-      if (this.hotelId !== null) { // Check for null
+      if (this.hotelId !== null) {
         this.getHotelDetails(this.hotelId);
       }
     });
-  }
-  // ngOnInit(): void {
-  //   this.route.params.subscribe(params => {
-  //     this.hotelId = params['id'];
 
-  //     if (this.hotelId) {
-  //       this.getHotelDetails(this.hotelId);
-  //     }
-  //   });
-  // }
+    this.likesService.getLikesByHotelId(this.hotelId!).subscribe({
+      next: (data) => {
+        this.likesCount = data
+      }
+    })
+
+
+    this.likesService.getMyLikeByHotelId(this.hotelId!, this.userService.userId!).subscribe({
+      next: (data) => {
+        data === 0 ? this.isLiked = false : this.isLiked = true;
+      }
+    })
+  }
 
   getHotelDetails(id: string): void {
     this.hotelService.getHotelById(id)
@@ -69,14 +88,50 @@ export class HotelDetailsComponent {
     }
   };
 
-
-  toggleLike(): void {
+   toggleLike() { 
+  
     if (this.isLiked) {
-      this.likesCount--;
-    } else {
-      this.likesCount++;
-    }
-    this.isLiked = !this.isLiked;
+         this.dislikeHotel();
+      } else {
+         this.likeHotel();
+      }
   }
+
+
+  likeHotel(): void {
+    this.likesService.likeHotel(this.hotelId!).subscribe({
+      next: () => {
+        this.isLiked = true;
+        this.likesCount++;
+      },
+      error: (error) => {
+        console.error('Error liking hotel:', error);
+      }
+    });
+  }
+  
+  dislikeHotel(): void {
+    const like = this.likes.find((like:any) => like._ownerId === this.userService.userId && like.hotelId === this.hotelId);
+    if (like) {
+      this.likesService.dislikeHotel(like._id).subscribe({
+        next: () => {
+          this.isLiked = false;
+          this.likesCount--;
+        },
+        error: (error) => {
+          console.error('Error disliking hotel:', error);
+        }
+      });
+    }
+  }
+  
+  // toggleLike(): void {
+  //   if (this.isLiked) {
+  //     this.likesCount--;
+  //   } else {
+  //     this.likesCount++;
+  //   }
+  //   this.isLiked = !this.isLiked;
+  // }
 
 }

@@ -1420,7 +1420,7 @@
                 "price": 76.90,
             },
         },
-        comments: {
+        likes: {
 
         }
     };

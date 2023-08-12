@@ -9,9 +9,13 @@
       <p class="lead">Stars: {{ hotel?.stars }}</p>
       <p class="lead">Price per night: ${{ hotel?.price }}</p>
       <p *ngIf="!isOwner">Likes: {{ likesCount }}</p>
-      <button *ngIf="!isOwner" (click)="toggleLike()" class="btn btn-primary" [class.btn-danger]="isLiked">{{ isLiked ? 'Dislike' :
+      <button *ngIf="!isOwner" (click)="toggleLike()" class="btn btn-primary" [class.btn-danger]="isLiked">
+        {{ isLiked ? 'Dislike' : 'Like' }}
+      </button>
+      <!-- <p *ngIf="!isOwner">Likes: {{ likesCount }}</p>
+      <button *ngIf="!isOwner" (click)="toggleLike()" class="btn btn-primary" [class.btn-danger]="isClicked">{{ isClicked ? 'Dislike' :
         'Like'
-        }}</button>
+        }}</button> -->
     </div>
 
   </div>
