@@ -1344,6 +1344,7 @@
                 "description": "Experience coastal luxury at its finest. Immerse in serene ocean views, exquisite spa treatments, and gourmet dining.",
                 "_createdOn": 1617194128641,
                 "stars": 5,
+                "likes": [],
                 "price": 19.90,
             },
             "fd436770-76c5-40e2-b231-77409eda7a62": {
@@ -1355,6 +1356,7 @@
                 "description": "Nestled in a lush forest, our rustic-chic retreat offers tranquility, outdoor adventures, and cozy cabins with modern comforts.",
                 "_createdOn": 1617194128642,
                 "stars": 5,
+                "likes": [],
                 "price": 89.90,
             },
             "fd436770-76c5-40e2-b231-77409eda7a63": {
@@ -1366,6 +1368,7 @@
                 "description": "Indulge in opulence. This grand palace hotel pampers with lavish suites, world-class dining, and lavish spa indulgence",
                 "_createdOn": 1617194128643,
                 "stars": 4,
+                "likes": [],
                 "price": 99.90,
             },
             "fd436770-76c5-40e2-b231-77409eda7a64": {
@@ -1377,6 +1380,7 @@
                 "description": "Elevate city stays. Contemporary design, panoramic skyline vistas, and personalized service redefine urban sophistication.",
                 "_createdOn": 1617194128644,
                 "stars": 4,
+                "likes": [],
                 "price": 99.90,
             },
             "fd436770-76c5-40e2-b231-77409eda7a65": {
@@ -1388,6 +1392,7 @@
                 "description": "Unwind on pristine shores. A tropical paradise with lavish suites, beachfront relaxation, and vibrant aquatic activities await.",
                 "_createdOn": 1617194128645,
                 "stars": 5,
+                "likes": [],
                 "price": 76.90,
             },
             "fd436770-76c5-40e2-b231-77409eda7a66": {
@@ -1399,6 +1404,7 @@
                 "description": " Embrace nature's embrace. Secluded cabins, breathtaking valley views, and nature trails create an enchanting mountain escape.",
                 "_createdOn": 1617194128646,
                 "stars": 4,
+                "likes": [],
                 "price": 76.90,
             },
             "fd436770-76c5-40e2-b231-77409eda7a67": {
@@ -1410,6 +1416,7 @@
                 "description": "Step into classic luxury. Historic charm, regal suites, and gourmet cuisine offer a refined retreat of timeless allure.",
                 "_createdOn": 1617194128647,
                 "stars": 5,
+                "likes": [],
                 "price": 76.90,
             },
         },

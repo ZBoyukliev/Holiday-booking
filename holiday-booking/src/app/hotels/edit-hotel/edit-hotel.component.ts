@@ -9,7 +9,7 @@ import { HotelService } from '../hotel.service';
 })
 export class EditHotelComponent implements OnInit {
   hotelId: string | null = null;
-  hotel: any = {}; // Update this type based on your actual data structure
+  hotel: any = {}; 
 
   constructor(private route: ActivatedRoute, private hotelService: HotelService, private router: Router) {}
 
@@ -38,7 +38,7 @@ export class EditHotelComponent implements OnInit {
       this.hotelService.updateHotel(this.hotelId, this.hotel).subscribe({
         next: () => {
           console.log('Hotel updated successfully');
-          this.router.navigate(['/catalog']); // Navigate back to the hotels list
+          this.router.navigate(['/catalog']); 
         },
         error: (error) => {
           console.error('Error updating hotel:', error);
@@ -49,16 +49,3 @@ export class EditHotelComponent implements OnInit {
     }
   }
 }
-
-
-
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-edit-hotel',
-//   templateUrl: './edit-hotel.component.html',
-//   styleUrls: ['./edit-hotel.component.scss']
-// })
-// export class EditHotelComponent {
-
-// }

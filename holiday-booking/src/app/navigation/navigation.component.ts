@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user/user.service';
-import { ApiService } from '../api.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +12,6 @@ export class NavigationComponent {
   constructor(
     public userService: UserService,
     private router: Router,
-    private apiService: ApiService
   ) { }
   logout(): void {
     this.userService.isLoggedIn = false;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HotelService } from '../hotels/hotel.service';
 import { UserService } from '../user/user.service';
+import { Hotel } from '../types/hotel';
 
 @Component({
   selector: 'app-home',
@@ -8,15 +9,9 @@ import { UserService } from '../user/user.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  hotels: any[] = [];
+  hotels: Hotel[] = [];
 
   constructor(private hotelService: HotelService, public userService: UserService) { }
-
-  ngOnInit(): void {
-    this.userService.checkLoggedIn();
-    this.getHotels();
-
-  }
 
   getHotels(): void {
     this.hotelService.getHotels()
@@ -24,7 +19,6 @@ export class HomeComponent implements OnInit {
         next: (data) => {
           this.hotels = data;
           console.log(this.hotels);
-
         },
         error: (error) => {
           console.error('Error fetching hotel data:', error);
@@ -32,6 +26,12 @@ export class HomeComponent implements OnInit {
       });
     console.log(this.hotels);
   };
+
+  ngOnInit(): void {
+    this.userService.checkLoggedIn();
+    this.getHotels();
+  };
+
 };
 
 

@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Hotel } from '../types/hotel';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,8 @@ export class HotelService {
 
   private apiUrl = 'http://localhost:3030/data/hotels';
 
-  getHotels(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+  getHotels(): Observable<Hotel[]> {
+    return this.http.get<Hotel[]>(this.apiUrl);
   };
 
   getHotelById(id: string): Observable<any> {
