@@ -4,15 +4,16 @@
   </div>
   <div class="card-body">
     <h5 class="card-title">{{hotel.title}}</h5>
-    <p class="card-text">{{hotel.description}}</p>
-    <p class="card-text price">Price per night: ${{(hotel.price.toFixed(2))}}</p>
+    <p class="card-text description">{{hotel.description}}</p>
+    <p class="card-text price m-0">Price per night: ${{(hotel.price.toFixed(2))}}</p>
+    <div class="buttons">
+      <button *ngIf="userService.isLoggedIn" [routerLink]="['/hotels/details', hotel._id]"
+        class="btn btn-primary">Details</button>
+      <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId "
+        [routerLink]="['/hotels/edit-hotel', hotel._id]" class="btn btn-edit">Edit</button>
+      <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId" (click)="deleteHotel()"
+        class="btn btn-delete">Delete</button>
 
-    <button *ngIf="userService.isLoggedIn" [routerLink]="['/hotels/details', hotel._id]"
-      class="btn btn-primary">Details</button>
-    <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId " [routerLink]="['/hotels/edit-hotel', hotel._id]"
-      class="btn btn-edit">Edit</button>
-    <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId" (click)="deleteHotel()"
-      class="btn btn-delete">Delete</button>
-  
+    </div>
   </div>
 </div>

@@ -1,8 +1,4 @@
-@media (min-width: 280px) and (max-width: 767px){
-    .card-container {
-        margin: 0 auto;
-    }
-}
+
 
 .catalog {
    background-image: url('/assets/main-home.jpg');
@@ -10,6 +6,26 @@
    background-position: center;
    padding: 40px;
    .catalog-row {
-    justify-content: space-around;
+    justify-content: start;
    }
+}
+
+@media (max-width:767px) {
+    .catalog {
+        padding: 16px 16px;
+        .card-container {
+            margin: 24px 0 !important;
+            padding: 0;
+        }
+        .catalog-row {
+            justify-content: space-around;
+           }
+    }
+}
+
+@media (min-width:768px) and (max-width:1200px) {
+    .catalog {
+        padding: 32px;
+       
+    }
 }
