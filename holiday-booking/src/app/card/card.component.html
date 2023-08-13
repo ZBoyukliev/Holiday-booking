@@ -5,7 +5,7 @@
   <div class="card-body">
     <h5 class="card-title">{{hotel.title}}</h5>
     <p class="card-text description">{{hotel.description}}</p>
-    <p class="card-text price m-0">Price per night: ${{(hotel.price.toFixed(2))}}</p>
+    <p class="card-text price m-0">Price per night: ${{hotel.price}}</p>
     <div class="buttons">
       <button *ngIf="userService.isLoggedIn" [routerLink]="['/hotels/details', hotel._id]"
         class="btn btn-primary">Details</button>
