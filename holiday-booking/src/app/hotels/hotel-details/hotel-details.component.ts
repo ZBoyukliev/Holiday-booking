@@ -16,7 +16,8 @@ export class HotelDetailsComponent {
   isLiked: boolean = false;
   isOwner: boolean = false;
   likesCount: number = 0;
-  likes: any[] = []
+  likes: any[] = [];
+  price: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -27,15 +28,12 @@ export class HotelDetailsComponent {
   ) { }
 
   ngOnInit(): void {
-   console.log('default');
    
     this.route.params.subscribe(params => {
       this.hotelId = params['id'];
       this.likesService.getAllLikes().subscribe({
         next: (data) => {
-          this.likes = data;
-          console.log('Get all likes');
-          
+          this.likes = data;  
         }
       })
 
@@ -70,7 +68,7 @@ export class HotelDetailsComponent {
           if (this.hotel._ownerId === this.userService.userId) {
             this.isOwner = true;
           }
-
+          this.price = data.price.toFixed(2);
         },
         error: (error) => {
           console.error('Error fetching hotel details:', error);

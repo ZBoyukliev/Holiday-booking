@@ -7,7 +7,7 @@
       <h1>{{ hotel?.title }}</h1>
       <p class="lead">{{ hotel?.description }}</p>
       <p class="lead">Stars: {{ hotel?.stars }}</p>
-      <p class="lead">Price per night: ${{ hotel?.price}}</p>
+      <p class="lead">Price per night: ${{ price }}</p>
       <p *ngIf="!isOwner">Likes: {{ likesCount }}</p>
       <button *ngIf="!isOwner" (click)="toggleLike()" class="btn btn-primary" [class.btn-danger]="isLiked">
         {{ isLiked ? 'Dislike' : 'Like' }}
