@@ -12,10 +12,7 @@
       <button *ngIf="!isOwner" (click)="toggleLike()" class="btn btn-primary" [class.btn-danger]="isLiked">
         {{ isLiked ? 'Dislike' : 'Like' }}
       </button>
-      <!-- <p *ngIf="!isOwner">Likes: {{ likesCount }}</p>
-      <button *ngIf="!isOwner" (click)="toggleLike()" class="btn btn-primary" [class.btn-danger]="isClicked">{{ isClicked ? 'Dislike' :
-        'Like'
-        }}</button> -->
+
     </div>
 
   </div>

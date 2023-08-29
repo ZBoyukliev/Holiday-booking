@@ -143,22 +143,4 @@ export class HotelDetailsComponent {
     }
   }
   
-  // dislikeHotel(): void {
-    
-  //   const like = this.likes.find((like:any) => like._ownerId === this.userService.userId && like.hotelId === this.hotelId);
-  //   console.log(like);
-    
-  //   if(like) {
-  //     this.likesService.dislikeHotel(like._id).subscribe({
-  //       next: () => {
-  //         this.isLiked = false;
-  //         this.likesCount--;
-  //       },
-  //       error: (error) => {
-  //         console.error('Error disliking hotel:', error);
-  //       }
-  //     });
-  //   }
-  // }
-  
 }

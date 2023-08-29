@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component,  EventEmitter, Input, Output } from '@angular/core';
 import { UserService } from '../user/user.service';
 import { HotelService } from '../hotels/hotel.service';
 import { Router } from '@angular/router';
@@ -15,16 +15,6 @@ export class CardComponent {
   @Input() hotel: any;
   @Input() userService!: UserService;
   @Output() hotelDeleted: EventEmitter<void> = new EventEmitter<void>();
-
-  // isDeleteModalOpen = false;
-
-  // showDeleteConfirmation(): void {
-  //   this.isDeleteModalOpen = true;
-  // }
-
-  // closeDeleteModal(): void {
-  //   this.isDeleteModalOpen = false;
-  // }
 
 
   deleteHotel(): void {
@@ -44,9 +34,5 @@ export class CardComponent {
   ngOnInit(): void {
     this.userService.checkLoggedIn();
   }
+
 }
-
-
-
-
-
