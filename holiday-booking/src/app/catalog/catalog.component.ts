@@ -10,7 +10,6 @@ import { Hotel } from '../types/hotel';
 })
 export class CatalogComponent {
   hotels: Hotel[] = [];
-
   constructor(private hotelService: HotelService, public userService: UserService) {
     this.userService = userService; 
   }
