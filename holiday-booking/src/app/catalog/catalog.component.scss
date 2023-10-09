@@ -1,31 +1,32 @@
-
-
 .catalog {
-   background-image: url('/assets/main-home.jpg');
-   background-size: cover;
-   background-position: center;
-   padding: 40px;
-   .catalog-row {
-    justify-content: start;
-   }
+    background-image: url('/assets/main-home.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 42px;
+
+    .catalog-row {
+        justify-content: start;
+    }
 }
 
 @media (max-width:767px) {
     .catalog {
         padding: 16px 16px;
+
         .card-container {
             margin: 24px 0 !important;
             padding: 0;
         }
+
         .catalog-row {
             justify-content: space-around;
-           }
+        }
     }
 }
 
 @media (min-width:768px) and (max-width:1200px) {
     .catalog {
         padding: 32px;
-       
+
     }
 }
