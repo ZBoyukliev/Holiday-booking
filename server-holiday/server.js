@@ -1403,7 +1403,7 @@
                 "imageUrl": "/assets/hote3.jpeg",
                 "description": " Embrace nature's embrace. Secluded cabins, breathtaking valley views, and nature trails create an enchanting mountain escape.",
                 "_createdOn": 1617194128646,
-                "stars": 4,
+                "stars": 5,
                 "likes": [],
                 "price": 76.90,
             },
