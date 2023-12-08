@@ -3,6 +3,7 @@
         typeof define === 'function' && define.amd ? define(['http', 'fs', 'crypto'], factory) :
             (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Server = factory(global.http, global.fs, global.crypto));
 }(this, (function (http, fs, crypto) {
+    
     'use strict';
 
     function _interopDefaultLegacy(e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
