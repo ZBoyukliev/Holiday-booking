@@ -160,7 +160,6 @@
     }
 
 
-
     function composeErrorObject(code, message) {
         return JSON.stringify({
             code,
@@ -445,7 +444,6 @@
     var users = userService.parseRequest;
 
     const { NotFoundError: NotFoundError$1, RequestError: RequestError$1 } = errors;
-
 
     var crud = {
         get,
@@ -842,7 +840,6 @@
                 collections.set(collectionName, collection);
             }
         }
-
 
         // Manipulation
 
