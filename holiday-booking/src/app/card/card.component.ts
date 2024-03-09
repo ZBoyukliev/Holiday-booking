@@ -16,7 +16,6 @@ export class CardComponent {
   @Input() userService!: UserService;
   @Output() hotelDeleted: EventEmitter<void> = new EventEmitter<void>();
 
-
   deleteHotel(): void {
     window.confirm('Are you sure you want to delete the hotel permanently!') &&
     this.hotelService.deleteHotel(this.hotel._id)
