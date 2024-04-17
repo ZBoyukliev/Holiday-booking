@@ -159,7 +159,6 @@
         };
     }
 
-
     function composeErrorObject(code, message) {
         return JSON.stringify({
             code,
@@ -402,7 +401,6 @@
     dataService.patch(':collection', actions.patch);
     dataService.delete(':collection', actions.delete);
 
-
     var jsonstore = dataService.parseRequest;
 
     /*
@@ -417,7 +415,6 @@
     userService.post('register', onRegister);
     userService.post('login', onLogin);
     userService.get('logout', onLogout);
-
 
     function getSelf(context, tokens, query, body) {
         if (context.user) {
