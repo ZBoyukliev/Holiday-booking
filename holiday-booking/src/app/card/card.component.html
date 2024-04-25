@@ -13,7 +13,6 @@
         [routerLink]="['/hotels/edit-hotel', hotel._id]" class="btn btn-edit">Edit</button>
       <button *ngIf="userService.isLoggedIn && userService.userId === hotel._ownerId" (click)="deleteHotel()"
         class="btn btn-delete">Delete</button>
-
     </div>
   </div>
 </div>
