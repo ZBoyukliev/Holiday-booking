@@ -1,5 +1,3 @@
-
-
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 import { ApiService } from '../api.service';
@@ -69,8 +67,6 @@ export class UserService {
   };
 
 };
-
-
 
 
 // import { HttpClient, HttpHeaders } from "@angular/common/http";
