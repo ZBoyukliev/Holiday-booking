@@ -6,8 +6,6 @@ import { UserRoutingModule } from './user-routing.module';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 
-
-
 @NgModule({
   declarations: [
     LoginComponent,
@@ -21,4 +19,4 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
   ]
 })
-export class UserModule { }
+export class UserModule {}
