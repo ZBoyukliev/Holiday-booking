@@ -9,7 +9,6 @@ import { Hotel } from '../types/hotel';
 export class HotelService {
 
   constructor(private http: HttpClient) { }
-
   private apiUrl = 'http://localhost:3030/data/hotels';
 
   getHotels(): Observable<Hotel[]> {
@@ -44,7 +43,6 @@ export class HotelService {
       headers: headers,
     });
   }
-  
 
   deleteHotel(hotelId: string): Observable<any> {
     const headers = new HttpHeaders()
@@ -54,6 +52,5 @@ export class HotelService {
     return this.http.delete(`${this.apiUrl}/${hotelId}`, {
       headers: headers,
     });
-  };
-  
+  }; 
 }
