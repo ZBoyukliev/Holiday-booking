@@ -119,7 +119,6 @@ export class HotelDetailsComponent {
         this.likes = data;
       }
     })
-    
   }
   dislikeHotel(): void {
     const like = this.likes.find(
@@ -140,5 +139,4 @@ export class HotelDetailsComponent {
       });
     }
   }
-  
 }
