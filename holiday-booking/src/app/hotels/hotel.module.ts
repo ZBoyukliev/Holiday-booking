@@ -6,8 +6,6 @@ import { EditHotelComponent } from './edit-hotel/edit-hotel.component';
 import { HotelRoutingModule } from './hotel-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [
     CreateHotelComponent,
