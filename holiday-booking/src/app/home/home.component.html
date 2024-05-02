@@ -1,15 +1,11 @@
 <div class="container-fluid home">
-
   <div class="bg-photo">
     <img class="img-fluid" src="/assets/home2.webp" alt="Beautiful Photo">
   </div>
-
   <!-- Static Hotels -->
   <div class="row py-5 px-0 px-md-4">
     <div class="card-container mb-4 mb-lg-0 col-10 col-md-6 col-lg-4" *ngFor="let hotel of hotels.slice(0, 3)">
       <app-card [hotel]="hotel" [userService]="userService"/>
     </div>
-
   </div>
-  
 </div>
