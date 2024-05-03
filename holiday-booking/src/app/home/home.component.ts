@@ -9,8 +9,8 @@ import { Hotel } from '../types/hotel';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  
   hotels: Hotel[] = [];
-
   constructor(private hotelService: HotelService, public userService: UserService) { }
 
   getHotels(): void {
