@@ -31,8 +31,4 @@ export class HomeComponent implements OnInit {
     this.userService.checkLoggedIn();
     this.getHotels();
   };
-
 };
-
-
-
