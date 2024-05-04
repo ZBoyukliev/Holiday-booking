@@ -450,7 +450,6 @@
         delete: del
     };
 
-
     function validateRequest(context, tokens, query) {
         /*
         if (context.params.collection == undefined) {
@@ -505,7 +504,6 @@
             return operators[operator.toLowerCase()](prop, value);
         }
     }
-
 
     function get(context, tokens, query, body) {
         validateRequest(context, tokens);
@@ -816,7 +814,6 @@
             context.protectedStorage = protectedStorage;
         };
     }
-
 
     /**
      * Create storage instance and populate with seed data
