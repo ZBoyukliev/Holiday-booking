@@ -18,7 +18,6 @@ export class CatalogComponent {
     this.userService.checkLoggedIn();   
     this.getHotels();
   }
-
   
   getHotels(): void {
     this.hotelService.getHotels()
@@ -34,5 +33,4 @@ export class CatalogComponent {
   refreshHotels(): void {
     this.getHotels(); 
   }
-
 }
