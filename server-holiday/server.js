@@ -997,7 +997,6 @@
         return { get, add, set, merge, delete: del, query };
     }
 
-
     function assignSystemProps(target, entry, ...rest) {
         const whitelist = [
             '_id',
@@ -1016,7 +1015,6 @@
 
         return target;
     }
-
 
     function assignClean(target, entry, ...rest) {
         const blacklist = [
@@ -1149,7 +1147,6 @@
         };
     }
 
-
     const secret = 'This is not a production server';
 
     function hash(string) {
@@ -1256,8 +1253,6 @@
             }
         };
 
-
-
         function getRule(action, collection, data = {}) {
             let currentRule = ruleOrDefault(true, rules['*'][action]);
             let propRules = [];
@@ -1304,7 +1299,6 @@
     }
 
     var rules = initPlugin$3;
-
     var identity = "email";
     var protectedData = {
         users: {
@@ -1313,8 +1307,7 @@
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
         },
-        sessions: {
-        }
+        sessions: {}
     };
 
     // -------------------------------------------------------------------------------------- //////////
@@ -1420,9 +1413,7 @@
                 "price": 86.90,
             },
         },
-        likes: {
-
-        }
+        likes: {}
     };
 
     // ------------------------------------------------------------------------------------------//
