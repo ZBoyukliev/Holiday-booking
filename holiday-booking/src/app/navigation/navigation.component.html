@@ -7,7 +7,6 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav d-flex align-items-end">
-
         <li class="nav-item">
           <a class="nav-link" routerLink="/">Home</a>
         </li>
@@ -29,9 +28,6 @@
         <li *ngIf="this.userService.isLoggedIn" class="nav-item">
           <a class="nav-link" routerLink="/">Welcome - {{userService.username}}</a>
         </li>
-        <!-- <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li> -->
       </ul>
     </div>
   </div>
