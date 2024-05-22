@@ -73,24 +73,6 @@
             <option value="5">5</option>
           </select>
         </div>
-        <!-- <div class="form-group">
-          <label for="stars">Stars *</label>
-          <input
-            type="number"
-            id="stars"
-            class="form-control"
-            name="stars"
-            min="1" 
-            max="5"
-            [(ngModel)]="hotel.stars"
-            required
-            #starsInput="ngModel"
-          >
-          <div *ngIf="starsInput.touched" class="inputField error">
-            <p *ngIf="starsInput.errors?.['required']">Enter stars rating from 1 to 5!</p>
-            <p *ngIf="starsInput.errors?.['min'] || starsInput.errors?.['max']">Stars rating must be between 1 and 5!</p>
-          </div>
-        </div> -->
       <button type="submit" class="btn btn-primary">Update Hotel</button>
      </form>
     </div>
