@@ -96,7 +96,5 @@ export class RegisterComponent {
     setTimeout(() => {
       this.showPasswordMatchMessage = false;
     }, 3000);
-
   };
 };
-
