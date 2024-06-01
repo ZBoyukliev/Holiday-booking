@@ -1312,7 +1312,6 @@
     var seedData = {
         
         hotels: {
-            
             "fd436770-76c5-40e2-b231-77409eda7a61": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a61",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1445,9 +1444,7 @@
     console.log(`Server started on port ${port}. You can make requests to http://localhost:${port}/`);
     console.log(`Admin panel located at http://localhost:${port}/admin`);
 
-    var softuniPracticeServer = {
-
-    };
+    var softuniPracticeServer = {};
 
     return softuniPracticeServer;
 
