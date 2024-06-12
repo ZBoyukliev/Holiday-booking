@@ -7,5 +7,4 @@ import { Observable } from "rxjs";
 })
 export class ApiService {
     constructor(private http: HttpClient) { }
-
 }
