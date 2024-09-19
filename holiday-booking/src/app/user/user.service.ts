@@ -10,7 +10,6 @@ import { User } from "../types/user";
 export class UserService {
 
   user: User | undefined;
-  // userId: User | undefined;
   userId: string | null = null;
   isLoggedIn: boolean = false;
   message: string | null = null;
