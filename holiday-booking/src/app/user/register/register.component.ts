@@ -75,20 +75,15 @@ export class RegisterComponent {
           if (response.accessToken) {
             this.userService.clearToken();
             this.userService.isLoggedIn = true;
-            console.log(this.userService.isLoggedIn);
-
             this.userService.setToken('accessToken', response.accessToken);
             this.userService.setToken('email', response.email);
             this.userService.setToken('userId', response._id);
             this.userService.setToken('username', response.username);
-
-            console.log('Registered successfully!');
             this.router.navigate(['/']);
             this.userService.showMessage('Registered successfully!');
           }
         },
         error: (error) => {
-          // this.userService.showMessage(error.error.message);
           this.errorMessage = error.error.message;
         },
       });
