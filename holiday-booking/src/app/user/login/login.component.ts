@@ -38,14 +38,11 @@ export class LoginComponent {
     this.userService.login(value.email, value.password).subscribe({
       next: (response) => {
         if (response.accessToken) {
-          // this.apiService.clearToken();
           this.userService.isLoggedIn = true;
           this.userService.setToken('accessToken', response.accessToken);
           this.userService.setToken('email', response.email);
           this.userService.setToken('userId', response._id);
           this.userService.setToken('username', response.username);
-
-          console.log('Login successful!');
           this.router.navigate(['/']);
           this.userService.showMessage('Logged in successfully!');
         }
