@@ -798,7 +798,6 @@
 
     const { uuid: uuid$2 } = util;
 
-
     function initPlugin(settings) {
         const storage = createInstance(settings.seedData);
         const protectedStorage = createInstance(settings.protectedData);
@@ -830,7 +829,6 @@
         }
 
         // Manipulation
-
         /**
          * Get entry by ID or list of all entries from collection or list of all collections
          * @param {string=} collection Name of collection to access. Throws error if not found. If omitted, returns list of all collections.
@@ -1006,7 +1004,6 @@
         if (rest.length > 0) {
             Object.assign(target, ...rest);
         }
-
         return target;
     }
 
