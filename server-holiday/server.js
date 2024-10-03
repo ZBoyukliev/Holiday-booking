@@ -982,7 +982,6 @@
                     result.push(Object.assign(deepCopy(entry), { _id: key }));
                 }
             }
-
             return result;
         }
 
@@ -1284,7 +1283,6 @@
                 .filter(([k]) => k[0] != '.')
                 .filter(([k, v]) => v.hasOwnProperty(action))
                 .map(([k, v]) => [k, v[action]]);
-
             return props;
         }
     }
