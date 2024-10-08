@@ -16,7 +16,6 @@ export class HotelService {
   };
 
   getHotelById(id: string): Observable<Hotel> {
-    
     return this.http.get<Hotel>(`${this.apiUrl}/${id}`);
   }
 
