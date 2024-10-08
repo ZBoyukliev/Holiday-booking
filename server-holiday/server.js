@@ -1398,6 +1398,18 @@
                 "likes": [],
                 "price": 86.90,
             },
+            "fd436770-76c5-40e2-b231-77416eda7a68": {
+                "_id": "ff436770-76c5-40e2-b231-77416eda7a68",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb92381bea9",
+                "title": "Elegance Manor 2",
+                "category": "hotel",
+                "imageUrl": "/assets/hotel-night.webp",
+                "description": "Historic charm, regal suites, and gourmet cuisine offer a refined retreat of timeless allure.",
+                "_createdOn": 1617194128647,
+                "stars": 5,
+                "likes": [],
+                "price": 76.90,
+            },
         },
         likes: {}
     };
