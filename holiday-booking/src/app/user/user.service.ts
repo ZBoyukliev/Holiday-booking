@@ -8,7 +8,6 @@ import { User } from "../types/user";
   providedIn: 'root',
 })
 export class UserService {
-
   user: User | undefined;
   userId: string | null = null;
   isLoggedIn: boolean = false;
@@ -23,8 +22,6 @@ export class UserService {
     console.log(text);
     setTimeout(() => {
       this.message = null;
-      console.log(this.message);
-
     }, this.timeoutDelay);
     console.log(this.message);
   };
