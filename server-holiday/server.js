@@ -1346,7 +1346,7 @@
                 "imageUrl": "/assets/hotel3.webp",
                 "description": "Elevate city stays. Contemporary design, panoramic skyline vistas, and personalized service redefine urban sophistication.",
                 "_createdOn": 1617194128644,
-                "stars": 4,
+                "stars": 5,
                 "likes": [],
                 "price": 99.90,
             },
@@ -1360,7 +1360,7 @@
                 "_createdOn": 1617194128645,
                 "stars": 5,
                 "likes": [],
-                "price": 86.90,
+                "price": 96.90,
             },
             "fd436770-76c5-40e2-b231-77409eda7a66": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a66",
@@ -1372,7 +1372,7 @@
                 "_createdOn": 1617194128646,
                 "stars": 5,
                 "likes": [],
-                "price": 76.90,
+                "price": 86.90,
             },
             "fd436770-76c5-40e2-b231-77409eda7a67": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a67",
@@ -1384,7 +1384,7 @@
                 "_createdOn": 1617194128647,
                 "stars": 5,
                 "likes": [],
-                "price": 86.80,
+                "price": 89.80,
             },
             "fd436770-76c5-40e2-b231-77409eda7a68": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a68",
