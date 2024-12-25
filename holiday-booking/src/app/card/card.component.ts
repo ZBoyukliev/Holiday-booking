@@ -27,8 +27,7 @@ export class CardComponent {
       error: (error) => {
         console.error('Error deleting hotel:', error);
       }
-    });
-
+    })
   }
   ngOnInit(): void {
     this.userService.checkLoggedIn();
