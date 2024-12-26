@@ -32,7 +32,6 @@ export class RegisterComponent {
     console.log('clicked');
 
     if (!this.registerForm) return;
-
     const form = this.registerForm;
 
     if (form.invalid) {
