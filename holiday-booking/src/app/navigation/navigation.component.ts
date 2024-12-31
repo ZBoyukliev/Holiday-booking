@@ -13,6 +13,7 @@ export class NavigationComponent {
     public userService: UserService,
     private router: Router,
   ) { }
+  
   logout(): void {
     this.userService.isLoggedIn = false;
     this.userService.username = null;
