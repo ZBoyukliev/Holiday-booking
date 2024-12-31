@@ -11,6 +11,7 @@ import { UserService } from "../user/user.service";
     constructor(private userService: UserService, private router: Router) { }
   
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+      
       if (this.userService.isAuthenticated()) {
         return true;
       } else {
