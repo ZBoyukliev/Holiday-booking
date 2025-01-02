@@ -86,6 +86,7 @@ export class RegisterComponent {
           this.errorMessage = error.error.message;
         },
       });
+    
     this.showPasswordMatchMessage = true;
     setTimeout(() => {
       this.showPasswordMatchMessage = false;
