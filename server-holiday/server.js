@@ -1310,7 +1310,7 @@
                 "imageUrl": "/assets/main-home.jpg",
                 "description": "Experience coastal luxury at its finest. Immerse in serene ocean views, exquisite spa treatments, and gourmet dining.",
                 "_createdOn": 1617194128641,
-                "stars": 5,
+                "stars": 4,
                 "likes": [],
                 "price": 39.90,
             },
@@ -1324,7 +1324,7 @@
                 "_createdOn": 1617194128642,
                 "stars": 5,
                 "likes": [],
-                "price": 99.90,
+                "price": 101.90,
             },
             "fd436770-76c5-30e2-b231-77409eda7a63": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a63",
@@ -1336,7 +1336,7 @@
                 "_createdOn": 1617194128643,
                 "stars": 4,
                 "likes": [],
-                "price": 89.90,
+                "price": 95.90,
             },
             "fd436780-76c5-40e2-b231-77409eda7a64": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a64",
