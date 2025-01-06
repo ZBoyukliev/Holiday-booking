@@ -30,4 +30,5 @@ export class NavigationComponent {
   ngOnInit(): void {
     this.userService.checkLoggedIn();
   }
+  
 }
