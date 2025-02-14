@@ -20,6 +20,7 @@ export class RegisterComponent {
     username: '',
     password: '',
   };
+  
   registrationError: boolean = false;
   allFields: boolean = false;
 
@@ -63,7 +64,6 @@ export class RegisterComponent {
       setTimeout(() => {
         this.registrationError = false;
       }, 3000);
-
      return
     }
 
