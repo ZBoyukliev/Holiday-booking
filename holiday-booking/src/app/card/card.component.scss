@@ -20,7 +20,6 @@
             }
         }
     }
-
     .card-body {
         height: 12rem;
         position: relative;
@@ -32,7 +31,6 @@
             text-overflow: ellipsis;
             margin-bottom: 0.8rem;
         }
-
         .buttons {
             position: absolute;
             bottom: 0;
@@ -42,17 +40,14 @@
             }
         }
     }
-
     .price {
         color: black;
         font-size: larger;
     }
-
     .btn-edit {
         background: green;
         color: white;
     }
-
     .btn-delete {
         background: red;
         color: white;
