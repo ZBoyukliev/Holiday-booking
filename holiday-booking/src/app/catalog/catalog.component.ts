@@ -8,7 +8,9 @@ import { Hotel } from '../types/hotel';
   templateUrl: './catalog.component.html',
   styleUrls: ['./catalog.component.scss']
 })
+  
 export class CatalogComponent {
+  
   hotels: Hotel[] = [];
   constructor(private hotelService: HotelService, public userService: UserService) {
     this.userService = userService; 
