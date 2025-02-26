@@ -4,7 +4,6 @@
     background-position: center;
     padding: 42px;
     min-height: 30rem;
-
     .catalog-row {
         justify-content: start;
     }
@@ -13,12 +12,10 @@
 @media (max-width:767px) {
     .catalog {
         padding: 16px 16px;
-
         .card-container {
             margin: 24px 0 !important;
             padding: 0;
         }
-
         .catalog-row {
             justify-content: space-around;
         }
