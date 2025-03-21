@@ -92,4 +92,5 @@ export class RegisterComponent {
       this.showPasswordMatchMessage = false;
     }, 3000);
   };
+  
 };
