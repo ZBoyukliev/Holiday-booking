@@ -1349,18 +1349,6 @@
                 "likes": [],
                 "price": 89.90,
             },
-            "fd436770-76d5-40e2-b231-77409eda7a65": {
-                "_id": "ff436770-76c5-40e2-b231-77409eda7a65",
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "Sapphire Sands Oasis:",
-                "category": "hotel",
-                "imageUrl": "/assets/hotel2.jpg",
-                "description": "Unwind on pristine shores. A tropical paradise with lavish suites, beachfront relaxation, and vibrant aquatic activities await.",
-                "_createdOn": 1617194128645,
-                "stars": 5,
-                "likes": [],
-                "price": 95.90,
-            },
             "fd436770-76c5-40e2-b231-77409eda7a66": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a66",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
