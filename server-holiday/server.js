@@ -1323,7 +1323,7 @@
                 "_createdOn": 1617194128642,
                 "stars": 5,
                 "likes": [],
-                "price": 99.90,
+                "price": 101.90,
             },
             "fd436770-76c5-30e2-b231-77409eda7a63": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a63",
@@ -1333,9 +1333,9 @@
                 "imageUrl": "/assets/home1.avif",
                 "description": "Indulge in opulence. This grand palace hotel pampers with lavish suites, world-class dining, and lavish spa indulgence",
                 "_createdOn": 1617194128643,
-                "stars": 4,
+                "stars": 5,
                 "likes": [],
-                "price": 87.90,
+                "price": 77.90,
             },
             "fd436780-76c5-40e2-b231-77409eda7a64": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a64",
