@@ -29,7 +29,6 @@ export class CardComponent {
       }
     })
   }
-  
   ngOnInit(): void {
     this.userService.checkLoggedIn();
   }
