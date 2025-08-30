@@ -1335,7 +1335,7 @@
                 "_createdOn": 1617194128643,
                 "stars": 5,
                 "likes": [],
-                "price": 77.90,
+                "price": 79.90,
             },
             "fd436780-76c5-40e2-b231-77409eda7a64": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a64",
@@ -1347,7 +1347,7 @@
                 "_createdOn": 1617194128644,
                 "stars": 4,
                 "likes": [],
-                "price": 102.90,
+                "price": 101.99,
             },
             "fd436770-76c5-40e2-b231-77409eda7a66": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a66",
@@ -1359,7 +1359,7 @@
                 "_createdOn": 1617194128646,
                 "stars": 5,
                 "likes": [],
-                "price": 99.90,
+                "price": 97.90,
             },
             "fd436770-76c5-40e2-b231-77409eda7a67": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a67",
@@ -1371,7 +1371,7 @@
                 "_createdOn": 1617194128647,
                 "stars": 5,
                 "likes": [],
-                "price": 99.90,
+                "price": 91.90,
             },
             "fd436770-76c5-40e2-b231-77409eda7a68": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a68",
@@ -1381,9 +1381,9 @@
                 "imageUrl": "/assets/hotel-night.webp",
                 "description": "Historic charm, regal suites, and gourmet cuisine offer a refined retreat of timeless allure.",
                 "_createdOn": 1617194128657,
-                "stars": 5,
+                "stars": 4,
                 "likes": [],
-                "price": 119.99,
+                "price": 109.99,
             },
             "fd436770-76c5-40e2-b231-77416eda7a68": {
                 "_id": "ff436770-76c5-40e2-b231-77416eda7a68",
@@ -1395,7 +1395,7 @@
                 "_createdOn": 1617194128647,
                 "stars": 5,
                 "likes": [],
-                "price": 98.99,
+                "price": 95.99,
             },
         },
         likes: {}
